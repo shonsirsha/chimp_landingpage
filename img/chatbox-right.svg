@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="417.499" height="337.391" viewBox="0 0 417.499 337.391">
+  <g id="Group_15" data-name="Group 15" transform="translate(-1554.768 -357.245)">
+    <g id="bakmi_right">
+      <path id="Path_9" data-name="Path 9" d="M1580.25,633.984c3.513-3.719,19.513-2.881,27.8-12.519,26.93-31.313,61.857-91.151,70.114-99.219,14.515-14.182,59.857-23.5,69.109-25.37,11.687-2.368,47.122-39.738,47.122-39.738" transform="matrix(0.995, 0.105, -0.105, 0.995, 183.676, -260.289)" fill="none" stroke="#ffe2e5" stroke-width="6"/>
+      <path id="Path_11" data-name="Path 11" d="M1580.25,548.558c3.249-1.922,17.915,4.982,25.579,0,24.9-16.187,58.5-39.594,66.14-43.765,13.421-7.331,42.763-8.969,51.317-9.936,10.806-1.224,54.968-37.72,54.968-37.72" transform="translate(190.75 4)" fill="none" stroke="#ffe2e5" stroke-width="6"/>
+      <path id="Path_13" data-name="Path 13" d="M1580.25,581.041c4.4-2.605,24.28,6.753,34.667,0,33.747-21.938,79.292-53.663,89.64-59.315,18.189-9.936,57.957-12.156,69.55-13.466,14.646-1.659,74.5-51.122,74.5-51.122" transform="translate(72.75 -48.138)" fill="none" stroke="#ffe2e5" stroke-width="6"/>
+      <path id="Path_10" data-name="Path 10" d="M1580.25,581.041c4.4-2.605,24.28,6.753,34.667,0,33.747-21.938,79.292-53.663,89.64-59.315,18.189-9.936,57.957-12.156,69.55-13.466,14.646-1.659,74.5-51.122,74.5-51.122" transform="translate(121.75 -33.138)" fill="none" stroke="#ffe2e5" stroke-width="6"/>
+      <path id="Polygon_7" data-name="Polygon 7" d="M18.5,0,37,32H0Z" transform="matrix(-0.259, 0.966, -0.966, -0.259, 1832.472, 412.924)" fill="#ffe2e5"/>
+      <rect id="Rectangle_6" data-name="Rectangle 6" width="25" height="25" rx="12.5" transform="translate(1852 495)" fill="#ffe2e5"/>
+    </g>
+    <g id="cbubtop" transform="translate(1554.768 487.403)">
+      <g id="Group_6" data-name="Group 6" transform="translate(0 0)">
+        <rect id="Rectangle_4" data-name="Rectangle 4" width="265.96" height="136.648" rx="20" transform="matrix(0.966, -0.259, 0.259, 0.966, 0, 68.835)"/>
+        <g id="Group_4" data-name="Group 4" transform="translate(75.558 74.222)">
+          <ellipse id="Ellipse_3" data-name="Ellipse 3" cx="12.5" cy="12" rx="12.5" ry="12" transform="translate(-0.326 27.375)" fill="#fff"/>
+          <ellipse id="Ellipse_4" data-name="Ellipse 4" cx="12.5" cy="12" rx="12.5" ry="12" transform="translate(58.674 15.375)" fill="#fff"/>
+          <circle id="Ellipse_5" data-name="Ellipse 5" cx="12" cy="12" r="12" transform="translate(117.674 0.375)" fill="#fff"/>
+        </g>
+      </g>
+      <path id="Polygon_1" data-name="Polygon 1" d="M50.441,0l50.441,67.866H0Z" transform="matrix(-0.966, 0.259, -0.259, -0.966, 285.259, 181.123)"/>
+    </g>
+  </g>
+</svg>

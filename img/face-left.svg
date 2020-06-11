@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="106.05" height="106.05" viewBox="0 0 106.05 106.05">
+  <g id="face_rect" transform="translate(-1458.701 -217.718)">
+    <rect id="Rectangle_5" data-name="Rectangle 5" width="75" height="75" transform="matrix(0.719, 0.695, -0.695, 0.719, 1510.8, 217.718)" fill="#ffe2e5"/>
+    <path id="Path_4" data-name="Path 4" d="M1007.139,347.5c10.408-11.057,24.875-9.185,24.875-9.185" transform="matrix(0.966, -0.259, 0.259, 0.966, 408.931, 180.926)" fill="none" stroke="#000" stroke-width="6"/>
+    <path id="Path_5" data-name="Path 5" d="M1007.139,347.5a23.984,23.984,0,0,1,21.115-9.185" transform="translate(504.746 -111)" fill="none" stroke="#000" stroke-width="6"/>
+    <ellipse id="Ellipse_6" data-name="Ellipse 6" cx="3.5" cy="3" rx="3.5" ry="3" transform="translate(1483 251)"/>
+    <path id="Path_6" data-name="Path 6" d="M1114.549,277.643l10.715,15.5-13.022,11.474" transform="matrix(0.899, -0.438, 0.438, 0.899, 382.655, 499.893)" fill="none" stroke="#000" stroke-width="6"/>
+    <path id="Path_7" data-name="Path 7" d="M1007.139,347.906c12.761-11.54,30.5-9.587,30.5-9.587" transform="matrix(-0.999, -0.035, 0.035, -0.999, 2528.935, 679.082)" fill="none" stroke="#000" stroke-width="6"/>
+    <ellipse id="Ellipse_7" data-name="Ellipse 7" cx="3.5" cy="3" rx="3.5" ry="3" transform="translate(1521 237)"/>
+  </g>
+</svg>

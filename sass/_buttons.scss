@@ -1,0 +1,21 @@
+%btn {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 8px 20px;
+  text-align: center;
+  cursor: pointer;
+  // margin: 3px;
+}
+
+// .btn-primary {
+//   @extend %btn;
+//  lighten($primary-color, 10%);
+// }
+.btn-pill {
+  border-radius: 40px;
+  padding: 12px 36px;
+}
+.btn-secondary {
+  @extend %btn;
+  @include set-background(#000000);
+}

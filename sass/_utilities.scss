@@ -1,0 +1,48 @@
+.container {
+  padding-top: 48px;
+  padding-left: 104px;
+  padding-right: 64px;
+  padding-bottom: 180px;
+}
+
+h1 {
+  font-size: 64px;
+  color: $gray-100;
+}
+p {
+  font-size: 24px;
+  color: $gray-100;
+}
+
+$spaceamounts: (1, 2, 3, 4, 5);
+@each $space in $spaceamounts {
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+  .my-#{$space} {
+    margin: #{$space}rem 0;
+  }
+
+  .mt-#{$space} {
+    margin-top: #{$space}rem;
+  }
+
+  .mr-#{$space} {
+    margin-right: #{$space}rem;
+  }
+
+  .p-#{$space} {
+    padding: #{$space}rem;
+  }
+  .py-#{$space} {
+    padding: #{$space}rem 0;
+  }
+
+  .pt-#{$space} {
+    padding-top: #{$space}rem;
+  }
+}
+.mute {
+  font-size: 1rem;
+  color: $light-gray;
+}

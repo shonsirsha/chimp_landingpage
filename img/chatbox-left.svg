@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="379.085" height="214.778" viewBox="0 0 379.085 214.778">
+  <g id="Group_14" data-name="Group 14" transform="translate(-1290.58 -714.624)">
+    <g id="bakmi_left">
+      <rect id="Rectangle_7" data-name="Rectangle 7" width="22" height="23" transform="translate(1407 852)" fill="#ffe2e5"/>
+      <path id="Path_12" data-name="Path 12" d="M1580.25,581.041c4.4-2.605,24.28,6.753,34.667,0,33.747-21.938,79.292-53.663,89.64-59.315,18.189-9.936,57.957-12.156,69.55-13.466,14.646-1.659,74.5-51.122,74.5-51.122" transform="translate(-287.25 342.862)" fill="none" stroke="#ffe2e5" stroke-width="6"/>
+      <path id="Path_14" data-name="Path 14" d="M1580.25,581.041c4.4-2.605,24.28,6.753,34.667,0,33.747-21.938,79.292-53.663,89.64-59.315,18.189-9.936,57.957-12.156,69.55-13.466,14.646-1.659,74.5-51.122,74.5-51.122" transform="translate(-191.148 60.324) rotate(8)" fill="none" stroke="#ffe2e5" stroke-width="6"/>
+      <path id="Polygon_8" data-name="Polygon 8" d="M14.5,0,29,11.077,23.461,29H5.539L0,11.077Z" transform="matrix(-0.309, 0.951, -0.951, -0.309, 1443.867, 805.056)" fill="#ffe2e5"/>
+    </g>
+    <g id="cbubbtm" transform="translate(1439.293 714.624)">
+      <g id="Group_5" data-name="Group 5" transform="translate(0 0)">
+        <rect id="Rectangle_4" data-name="Rectangle 4" width="209.637" height="107.71" rx="20" transform="matrix(0.966, -0.259, 0.259, 0.966, 0, 54.258)"/>
+        <g id="Group_4" data-name="Group 4" transform="translate(58.512 57.983)">
+          <circle id="Ellipse_3" data-name="Ellipse 3" cx="9.5" cy="9.5" r="9.5" transform="translate(0.195 23.393)" fill="#fff"/>
+          <circle id="Ellipse_4" data-name="Ellipse 4" cx="10" cy="10" r="10" transform="translate(47.195 12.393)" fill="#fff"/>
+          <ellipse id="Ellipse_5" data-name="Ellipse 5" cx="10" cy="9.5" rx="10" ry="9.5" transform="translate(93.195 0.393)" fill="#fff"/>
+        </g>
+      </g>
+      <path id="Polygon_2" data-name="Polygon 2" d="M39.759,0,79.517,53.494H0Z" transform="matrix(-0.966, 0.259, -0.259, -0.966, 126.536, 168.79)"/>
+    </g>
+  </g>
+</svg>

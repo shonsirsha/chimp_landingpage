@@ -1,0 +1,143 @@
+@import "config";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Gill Sans", "sans-serif";
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: #ffffff;
+  grid-template-columns: 60% 40%;
+  z-index: -1;
+  .hero-text-container {
+    padding-top: 46px;
+    padding-left: 104px;
+    padding-right: 64px;
+    padding-bottom: 180px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    background: #ffffff;
+  }
+  nav {
+    margin-bottom: 10rem;
+    margin-right: -32px;
+    div {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  li {
+    margin-right: 32px;
+  }
+  a {
+    text-decoration: none;
+    @include set-background(#ffffff);
+  }
+  a:hover {
+    color: $primary-color;
+  }
+  .hero-drawing {
+    overflow: hidden;
+    background: $primary-color;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+    .cloud-left {
+      position: absolute;
+      top: -70px;
+      left: -40px;
+    }
+
+    .cblack {
+      position: absolute;
+      top: 70px;
+      left: 310px;
+    }
+
+    .cloud-right {
+      position: absolute;
+      top: -36px;
+      right: -190px;
+    }
+
+    .face-left {
+      position: absolute;
+      top: 410px;
+      left: 90px;
+    }
+
+    .face-right {
+      position: absolute;
+      top: 280px;
+      right: 215px;
+    }
+
+    .chatbox-left {
+      position: absolute;
+      top: 70%;
+      left: -105px;
+    }
+
+    .chatbox-right {
+      position: absolute;
+      top: 35%;
+      right: -65px;
+    }
+
+    .cloud-left-btm {
+      position: absolute;
+      bottom: -120px;
+      left: -30px;
+    }
+    .t1 {
+      position: absolute;
+      top: 290px;
+      left: 360px;
+    }
+    .t2 {
+      position: absolute;
+      bottom: 390px;
+      left: 50px;
+    }
+    .t3 {
+      position: absolute;
+      bottom: 240px;
+      right: 210px;
+    }
+    .c1 {
+      position: absolute;
+      bottom: 100px;
+      right: 290px;
+    }
+    .seeds {
+      position: absolute;
+      bottom: 30px;
+      right: 50px;
+    }
+  }
+  .img-circle {
+    margin-top: -48px;
+  }
+  .scroll-div {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+@import "utilities";
+@import "buttons";
