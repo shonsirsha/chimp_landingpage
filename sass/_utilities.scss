@@ -1,20 +1,37 @@
+@each $name, $value in $colors {
+  .bg-#{$name} {
+    background: $value;
+    color: set-text-color($value);
+  }
+}
+
 .container {
   padding-top: 48px;
   padding-left: 104px;
   padding-right: 64px;
   padding-bottom: 180px;
 }
+button {
+  border: none;
+  font-family: Gill Sans;
+  font-size: 16px;
+  cursor: pointer;
+}
 
 h1 {
   font-size: 64px;
   color: $gray-100;
+}
+.h2-style {
+  font-size: 39px;
+  font-weight: 500;
 }
 p {
   font-size: 24px;
   color: $gray-100;
 }
 
-$spaceamounts: (1, 2, 3, 4, 5);
+$spaceamounts: (1, 2, 3, 4, 5, 6, 7, 8);
 @each $space in $spaceamounts {
   .m-#{$space} {
     margin: #{$space}rem;
@@ -42,7 +59,7 @@ $spaceamounts: (1, 2, 3, 4, 5);
     padding-top: #{$space}rem;
   }
 }
+
 .mute {
   font-size: 1rem;
-  color: $light-gray;
 }

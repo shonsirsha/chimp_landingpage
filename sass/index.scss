@@ -9,6 +9,7 @@ body {
 }
 
 .hero-container {
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   background: #ffffff;
@@ -18,7 +19,7 @@ body {
     padding-top: 46px;
     padding-left: 104px;
     padding-right: 64px;
-    padding-bottom: 180px;
+    padding-bottom: 64px;
     display: flex;
     flex-direction: column;
     z-index: 2;
@@ -136,6 +137,31 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
+  }
+
+  .signup-login-wrapper {
+    padding: 120px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    form {
+      max-width: 654px;
+      display: flex;
+      flex-direction: column;
+
+      input {
+        padding: 16px;
+        border-radius: 8px;
+        border: none;
+        background: #ededed;
+      }
+    }
+  }
+
+  .forget-rememberme-wrapper {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
