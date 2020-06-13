@@ -1,3 +1,15 @@
+$primary-color: #f64452;
+$gray-100: #2f2f2f;
+$black: #000000;
+$light-gray: #8b8b8b;
+
+$colors: (
+  primary: $primary-color,
+  secondary: $black,
+  gray-100: $gray-100,
+  light-gray: $light-gray,
+);
+
 @each $name, $value in $colors {
   .btn-#{$name} {
     background: $value;

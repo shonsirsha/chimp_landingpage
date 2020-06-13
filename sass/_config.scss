@@ -1,13 +1,3 @@
-$primary-color: #f64452;
-$gray-100: #2f2f2f;
-$black: #000000;
-$light-gray: #8b8b8b;
-
-$colors: (
-  primary: $primary-color,
-  secondary: $black,
-);
-
 //set text color based on bg
 @function set-text-color($color) {
   @if (lightness($color) > 70) {
