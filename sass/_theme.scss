@@ -3,6 +3,21 @@ $gray-100: #2f2f2f;
 $black: #000000;
 $light-gray: #8b8b8b;
 
+//set text color based on bg
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return $gray-100;
+  } @else {
+    @return #ffffff;
+  }
+}
+
+//set background & text color
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
 $colors: (
   primary: $primary-color,
   secondary: $black,

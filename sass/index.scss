@@ -1,4 +1,5 @@
-@import "config";
+@import "theme";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -167,4 +168,3 @@ body {
 
 @import "utilities";
 @import "buttons";
-@import "theme";
