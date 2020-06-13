@@ -2,6 +2,7 @@ $primary-color: #f64452;
 $gray-100: #2f2f2f;
 $black: #000000;
 $light-gray: #8b8b8b;
+$light-gray-2: #959595;
 
 //set text color based on bg
 @function set-text-color($color) {
@@ -23,6 +24,7 @@ $colors: (
   secondary: $black,
   gray-100: $gray-100,
   light-gray: $light-gray,
+  light-gray-2: $light-gray-2,
 );
 
 @each $name, $value in $colors {

@@ -8,7 +8,9 @@
 body {
   font-family: "Gill Sans", "sans-serif";
 }
-
+input {
+  font-size: 1rem;
+}
 .hero-container {
   min-height: 100vh;
   display: grid;
@@ -33,6 +35,10 @@ body {
       display: flex;
       align-items: center;
     }
+
+    a {
+      @include set-background(#ffffff);
+    }
   }
 
   ul {
@@ -47,7 +53,6 @@ body {
   }
   a {
     text-decoration: none;
-    @include set-background(#ffffff);
   }
   a:hover {
     color: $primary-color;
