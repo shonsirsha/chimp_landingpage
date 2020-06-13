@@ -1,0 +1,15 @@
+@each $name, $value in $colors {
+  .btn-#{$name} {
+    background: $value;
+    color: set-text-color($value);
+  }
+
+  .text-#{$name} {
+    color: $value;
+  }
+
+  .bg-#{$name} {
+    background: $value;
+    color: set-text-color($value);
+  }
+}
