@@ -38,7 +38,7 @@ h4 {
   }
 }
 .hide-mobile {
-  display: block !important;
+  display: flex !important;
   @include media("<=phone") {
     display: none !important;
   }
@@ -46,7 +46,7 @@ h4 {
 .mobile {
   display: none;
   @include media("<=phone") {
-    display: block;
+    display: flex;
   }
 }
 .kbd {
