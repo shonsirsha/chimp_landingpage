@@ -21,24 +21,24 @@ h4 {
   font-family: "NotoSans-Bold", "sans-serif";
 }
 .hide-tablet {
-  display: block;
+  display: block !important;
   @include media("<=1070px") {
-    display: none;
+    display: none !important;
   }
 }
 .site-wrapper {
   // overflow-x: hidden;
 }
 .tablet {
-  display: none;
+  display: none !important;
   @include media("<=1070px") {
-    display: block;
+    display: block !important;
   }
 }
 .hide-mobile {
-  display: block;
+  display: block !important;
   @include media("<=phone") {
-    display: none;
+    display: none !important;
   }
 }
 .mobile {
