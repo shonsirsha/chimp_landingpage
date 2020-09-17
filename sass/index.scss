@@ -108,6 +108,9 @@ h4 {
     }
     form {
       display: flex;
+      button {
+        background: #f0f0f0;
+      }
     }
     padding: 16px;
     input {
@@ -276,31 +279,6 @@ h4 {
     display: flex;
     align-items: center;
     cursor: pointer;
-  }
-
-  .signup-login-wrapper {
-    padding: 120px 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    form {
-      max-width: 654px;
-      display: flex;
-      flex-direction: column;
-
-      input {
-        padding: 16px;
-        border-radius: 8px;
-        border: none;
-        background: #ededed;
-      }
-    }
-  }
-
-  .forget-rememberme-wrapper {
-    display: flex;
-    justify-content: space-between;
   }
 }
 
