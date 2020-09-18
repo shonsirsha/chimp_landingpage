@@ -332,11 +332,8 @@ h4 {
     flex-direction: column;
   }
   .grid-2 {
-    min-height: 310px;
-
     @include media("<=1070px") {
       grid-template-columns: 100%;
-      min-height: auto;
     }
     gap: 48px;
   }
