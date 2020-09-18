@@ -26,10 +26,13 @@ $(".switch").on("click", function () {
 $(document).on("keyup", function (e) {
   if (e.which == 70) {
     // 70 is F
-    if (!$("#email").is(":focus")) {
+    if (!$(".email_addr").is(":focus")) {
       $("#toFeatures").click();
     }
   }
+});
+$(".email_addr").on("keyup", function (e) {
+  $(".email_addr").val($(this).val());
 });
 $(".scroll-div")
   .find("p, img")
@@ -55,9 +58,13 @@ $("a").on("click", function (event) {
 
 var distance0 = $("#time-tracking").offset().top;
 var distance1 = $("#contacts-companies-management").offset().top;
-var distance2 = $("#contacts-companies-management").offset().top;
+var distance2 = $("#commands").offset().top;
 
 var $window = $(window);
+
+var scrollTop = $(window).scrollTop(),
+  elementOffset = $("#time-tracking").offset().top,
+  distance = elementOffset - scrollTop;
 
 $window.scroll(function () {
   if ($window.scrollTop() >= distance0) {
@@ -68,17 +75,24 @@ $window.scroll(function () {
     $(".feature-link").removeClass("active");
     $(".feature-link").eq(1).addClass("active");
   }
+  if ($window.scrollTop() >= distance2) {
+    $(".feature-link").removeClass("active");
+    $(".feature-link").eq(2).addClass("active");
+  }
 });
 
 $("button[type='submit']").on("click", function (e) {
   e.preventDefault();
-  let email = $("#email").val();
+  let email = $(".email_addr").val();
   if (validateEmail(email)) {
     $(".failedEmail").fadeOut();
     $("form").fadeOut();
     $(".try").fadeOut();
     setTimeout(() => {
-      $(".try").html("Woohoo! You've registered! 🎉 🥳");
+      $(".trial-wrapper").css("background", "#fff");
+      $(".try").html(
+        `Woohoo! <br/> You've registered for Chimp 🎉 🥳 <br/><br /> Don't forget to check your email <a class="text-primary" href="mailto:${email}">(${email})</a> 😉 📧 `
+      );
       $(".try").css("textAlign", "center");
       $(".try").css("fontSize", "18");
       $(".try").css("marginBottom", "0");
@@ -88,8 +102,13 @@ $("button[type='submit']").on("click", function (e) {
       $(".try").fadeIn();
     }, 300);
   } else {
+    alert(email);
     $(".failedEmail").fadeIn();
   }
+});
+
+$(".more").on("click", function () {
+  $("#toFeatures").click();
 });
 
 function getSecondPart(str) {
