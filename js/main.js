@@ -66,19 +66,27 @@ var scrollTop = $(window).scrollTop(),
   elementOffset = $("#time-tracking").offset().top,
   distance = elementOffset - scrollTop;
 
+let distances = [0, 0, 0];
+
 $window.scroll(function () {
-  if ($window.scrollTop() >= distance0) {
-    $(".feature-link").removeClass("active");
-    $(".feature-link").eq(0).addClass("active");
-  }
-  if ($window.scrollTop() >= distance1) {
-    $(".feature-link").removeClass("active");
-    $(".feature-link").eq(1).addClass("active");
-  }
-  if ($window.scrollTop() >= distance2) {
-    $(".feature-link").removeClass("active");
-    $(".feature-link").eq(2).addClass("active");
-  }
+  let tt = $("#time-tracking").offset().top - $(".browser-border").offset().top;
+  if (tt < 0) tt = tt * -1;
+  let cc =
+    $("#contacts-companies-management").offset().top -
+    $(".browser-border").offset().top;
+  if (cc < 0) cc = cc * -1;
+  let c = $("#commands").offset().top - $(".browser-border").offset().top;
+  if (c < 0) c = c * -1;
+  distances[0] = tt;
+  distances[1] = cc;
+  distances[2] = c;
+  let tempDist = distances.slice();
+  tempDist.sort(function (a, b) {
+    return a - b;
+  });
+  let ix = distances.indexOf(tempDist[0]);
+  $(`.feature-link`).removeClass("active");
+  $(`.feature-link`).eq(ix).addClass("active");
 });
 
 $("button[type='submit']").on("click", function (e) {
