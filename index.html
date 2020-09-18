@@ -13,9 +13,8 @@
           <nav>
             <ul>
               <div>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Impressum</a></li>
+                <li><a id="toFeatures" href="#features">Features</a></li>
+                <li><a href="#">Imprint</a></li>
               </div>
             </ul>
           </nav>
@@ -30,7 +29,7 @@
               <b>Concentrate on what's important. </b>
             </p>
             <div class="mt-2 trial-wrapper shadow-md">
-              <p class="mute mb-1">Try <b>Chimp</b> first!</p>
+              <p class="mute mb-1 try">Try <b>Chimp</b> first!</p>
 
               <form>
                 <input
@@ -39,8 +38,12 @@
                   placeholder="johndoe@example.com"
                   id="email"
                 />
-                <button>🚀</button>
+                <button type="submit">🚀</button>
               </form>
+              <p class="failedEmail mute mt-1 hide">
+                Oopsie! 🤭 Your e-mail address is <em>invalid.</em> <br />
+                Please check it again!
+              </p>
             </div>
           </div>
           <img class="img-circle" src="./img/circle.svg" />
@@ -71,13 +74,13 @@
           <img class="c1" src="./img/c1.svg" />
         </div>
       </div>
-      <div class="features-container">
+      <div id="features" class="features-container">
         <!-- <div class="feature-wrapper">
           
         </div> -->
         <div class="sidebar hide-mobile text-light">
           <h3 class="feature-title">Features:</h3>
-          <a href="#time-tracking" class="mt-1 feature-link"
+          <a href="#time-tracking" class="mt-1 feature-link active"
             >Time Tracking & Invoice Generation</a
           >
           <a
@@ -153,6 +156,7 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.2.0/dist/confetti.browser.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/images.js"></script>
   </body>
