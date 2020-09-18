@@ -55,6 +55,14 @@ h4 {
     overflow-x: hidden;
   }
 }
+.brand {
+  width: 100%;
+  max-width: 60px;
+  margin-right: 24px;
+  img {
+    width: 100%;
+  }
+}
 .tablet {
   display: none !important;
   @include media("<=1070px") {
@@ -186,6 +194,7 @@ h4 {
   }
   nav {
     margin-bottom: 7rem;
+    display: flex;
     @include media("<=1070px") {
       margin-bottom: 3rem;
     }
@@ -359,7 +368,6 @@ h4 {
     flex-direction: column;
   }
   .grid-2 {
-    min-height: 310px;
     @include media("<=1070px") {
       grid-template-columns: 100%;
       min-height: auto;
@@ -455,10 +463,6 @@ h4 {
     img {
       border-radius: 10px;
       max-width: 100%;
-      height: 100%;
-      @include media("<=1070px") {
-        height: auto;
-      }
     }
   }
 }

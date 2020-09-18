@@ -101,7 +101,6 @@ $("button[type='submit']").on("click", function (e) {
       $(".try").fadeIn();
     }, 300);
   } else {
-    alert(email);
     $(".failedEmail").fadeIn();
   }
 });
