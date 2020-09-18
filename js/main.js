@@ -89,7 +89,6 @@ $("button[type='submit']").on("click", function (e) {
     $("form").fadeOut();
     $(".try").fadeOut();
     setTimeout(() => {
-      $(".trial-wrapper").css("background", "#fff");
       $(".try").html(
         `Woohoo! <br/> You've registered for Chimp 🎉 🥳 <br/><br /> Don't forget to check your email <a class="text-primary" href="mailto:${email}">(${email})</a> 😉 📧 `
       );
