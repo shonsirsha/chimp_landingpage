@@ -89,26 +89,41 @@ $window.scroll(function () {
   $(`.feature-link`).eq(ix).addClass("active");
 });
 
-$("button[type='submit']").on("click", function (e) {
+$("input[type='submit']").on("click", function (e) {
   e.preventDefault();
+
   let email = $(".email_addr").val();
   if (validateEmail(email)) {
-    $(".failedEmail").fadeOut();
-    $("form").fadeOut();
-    $(".try").fadeOut();
-    setTimeout(() => {
-      $(".try").html(
-        `Woohoo! <br/> You've registered for Chimp 🎉 🥳 <br/><br /> Don't forget to check your email <a class="text-primary" href="mailto:${email}">(${email})</a> 😉 📧 `
-      );
-      $(".try").css("textAlign", "center");
-      $(".try").css("fontSize", "18");
-      $(".try").css("marginBottom", "0");
-    }, 300);
-    fireConfetti();
-    setTimeout(() => {
-      $(".try").fadeIn();
-    }, 300);
+    $(".failedEmail").html("Signing you up...");
+    $(".failedEmail").fadeIn();
+    $.ajax({
+      type: "GET",
+      url: $(".validate").attr("action"),
+      data: $(".validate").serialize(),
+      cache: false,
+      dataType: "jsonp",
+      jsonp: "c",
+      contentType: "application/json; charset=utf-8",
+
+      error: function (error) {},
+
+      success: function (data) {
+        if (data.result != "success") {
+          //failed;
+          $(".failedEmail").fadeIn();
+
+          if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
+            emailSuccess(email); // already subscribed - but just say youre registered.
+          }
+        } else {
+          emailSuccess(email);
+        }
+      },
+    });
   } else {
+    $(".failedEmail").html(
+      "Oopsie! 🤭 Your e-mail address is <em>invalid.</em> <br /> Please check it again!"
+    );
     $(".failedEmail").fadeIn();
   }
 });
@@ -116,6 +131,24 @@ $("button[type='submit']").on("click", function (e) {
 $(".more").on("click", function () {
   $("#toFeatures").click();
 });
+
+function emailSuccess(email) {
+  $(".failedEmail").fadeOut();
+  $("form").fadeOut();
+  $(".try").fadeOut();
+  setTimeout(() => {
+    $(".try").html(
+      `Woohoo! <br/> You've registered for Chimp 🎉 🥳 <br/><br /> Don't forget to check your email <a class="text-primary" href="mailto:${email}">(${email})</a> 😉 📧 `
+    );
+    $(".try").css("textAlign", "center");
+    $(".try").css("fontSize", "18");
+    $(".try").css("marginBottom", "0");
+  }, 300);
+  fireConfetti();
+  setTimeout(() => {
+    $(".try").fadeIn();
+  }, 300);
+}
 
 function getSecondPart(str) {
   return str.split("-")[1];
