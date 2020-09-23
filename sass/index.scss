@@ -540,7 +540,6 @@ h4 {
 }
 
 .features-container {
-  padding: 64px;
   display: flex;
   @include media("<=phone") {
     flex-direction: column;
