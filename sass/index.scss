@@ -373,7 +373,7 @@ h4 {
 
   display: grid;
   background: #ffffff;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 100%;
   z-index: -1;
   @include media(">phone", "<=1070px") {
   }
@@ -407,7 +407,7 @@ h4 {
     }
   }
   nav {
-    margin-bottom: 7rem;
+    margin-bottom: 0;
     display: flex;
     @include media("<=1070px") {
       margin-bottom: 3rem;
