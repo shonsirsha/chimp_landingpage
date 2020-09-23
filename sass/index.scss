@@ -6,10 +6,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "NotoSans-Regular", "sans-serif";
+  font-family: "SF Display";
+  font-weight: 400;
 }
 body {
-  font-family: "NotoSans-Regular", "sans-serif";
+  font-family: "SF Display";
+  font-weight: 400;
 }
 .browser-border {
   background: transparent;
@@ -18,6 +20,13 @@ body {
   top: 0;
   height: 10px;
   z-index: 4;
+}
+.flex-h {
+  display: flex;
+}
+.flex-v {
+  display: flex;
+  flex-direction: column;
 }
 textarea:focus,
 input:focus {
@@ -154,6 +163,209 @@ h4 {
     background: #b1464b;
     height: 100%;
     width: 30px;
+  }
+}
+.blue-btn {
+  border-style: none;
+  background-color: $blue;
+  box-shadow: 0 2px 8px 0 rgba(43, 64, 255, 0.2);
+}
+.blue-btn-outline {
+  border-style: solid 2px;
+  border-color: $blue;
+  background-color: transparent;
+  box-shadow: 0 2px 8px 0 rgba(43, 64, 255, 0.2);
+}
+.app-outer-wrapper {
+  padding: 64px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .tag-container {
+    padding: 8px;
+    padding-right: 16px;
+    padding-left: 16px;
+    border-radius: 15px;
+    background: $blue;
+  }
+  .bold {
+    font-weight: 800;
+  }
+  .light {
+    font-weight: 200;
+  }
+  .app-wrapper {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    max-width: 1000px;
+    width: 100%;
+    padding-top: 8px;
+    padding-left: 8px;
+    background: #f7f7f7;
+    border-style: solid;
+    border-width: 1px;
+    border-color: hsla(0, 0%, 72.5%, 0.4);
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    box-shadow: 2px 0 30px 4px rgba(0, 0, 0, 0.08);
+    .win-btn {
+      width: 13px;
+      height: 13px;
+      margin-right: 8px;
+      border-radius: 7px;
+    }
+    .inner-app {
+      padding: 24px;
+      padding-left: 16px;
+      padding-top: 16px;
+    }
+    .window-controls-wrapper {
+      display: flex;
+      div {
+        cursor: pointer;
+      }
+      .close {
+        border: 1px solid #ee4e46;
+        background-color: #ff6059;
+      }
+
+      .min {
+        border: 1px solid #e7ad2e;
+        background-color: #ffbd2e;
+      }
+
+      .max {
+        border: 1px solid #26a93b;
+        background-color: #28ca42;
+        cursor: unset;
+      }
+    }
+    .heavy {
+      font-weight: 600;
+      font-size: 20px;
+    }
+    .weather {
+      font-size: 17px;
+      font-weight: 400;
+      color: #a7a7a7;
+    }
+    .sidebar-wrapper {
+      margin-right: 48px;
+      display: flex;
+      flex-direction: column;
+      max-width: 365px;
+      width: 100%;
+      .top-part {
+        img {
+          margin-right: 12px;
+          max-height: 58px;
+          max-width: 55px;
+        }
+        .flex-v {
+          padding-top: 6px;
+        }
+      }
+
+      .menu-items {
+        padding-left: 16px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 36px;
+      }
+      .menu-item {
+        min-height: 30px;
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+        p {
+          font-size: 18px;
+          font-weight: 800;
+        }
+        span {
+          background: #cfced3 !important;
+          padding: 4px 6px !important;
+        }
+      }
+    }
+
+    .contacts-wrapper {
+      margin-right: 48px;
+
+      .header {
+        font-size: 40px;
+      }
+
+      .contacts {
+        display: flex;
+        flex-direction: column;
+        margin-top: 36px;
+
+        .contact-item {
+          display: flex;
+          .letter {
+            font-size: 48px;
+            font-weight: 800;
+          }
+          .flex-v {
+            width: 100%;
+          }
+          .name-container {
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            p {
+              font-size: 18px;
+            }
+          }
+          .active {
+            border-radius: 16px;
+            background: #ededed;
+          }
+        }
+      }
+    }
+
+    .indiv-contact-wrapper {
+      display: flex;
+      flex-direction: column;
+      .header {
+        font-size: 40px;
+      }
+      .tags-section {
+        display: flex;
+        .tag-container {
+          margin-right: 4px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      .contact {
+        display: flex;
+        flex-direction: column;
+        margin-top: 36px;
+
+        .contact-method {
+          display: flex;
+        }
+
+        .blue-btn,
+        .blue-btn-outline {
+          padding: 10px;
+
+          width: 150px;
+          border-radius: 6px;
+          color: white;
+          font-weight: 200;
+        }
+        .blue-btn-outline {
+          color: $blue;
+        }
+      }
+    }
   }
 }
 .hero-container {
