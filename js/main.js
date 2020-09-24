@@ -132,6 +132,10 @@ $(".more").on("click", function () {
   $("#toFeatures").click();
 });
 
+$(".download-btn").on("click", function () {
+  $("#toDownload").click();
+});
+
 function emailSuccess(email) {
   $(".failedEmail").fadeOut();
   $("form").fadeOut();

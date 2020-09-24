@@ -1,16 +1,21 @@
 @import "theme";
 @import "fonts";
 @import "breakpoints";
+@import url("https://rsms.me/inter/inter.css");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "SF Display";
+  //font-family: "SF Display";
+}
+html {
+  font-family: "Inter", sans-serif;
   font-weight: 400;
 }
 body {
-  font-family: "SF Display";
+  font-family: "Inter", sans-serif;
+
   font-weight: 400;
 }
 .browser-border {
@@ -51,7 +56,6 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "NotoSans-Bold", "sans-serif";
 }
 .hide-tablet {
   display: block !important;
@@ -69,7 +73,9 @@ h4 {
   max-width: 60px;
   margin-right: 24px;
   img {
-    width: 100%;
+    width: 80px;
+    height: 80px;
+    margin-left: -30px;
   }
 }
 .tablet {
@@ -91,7 +97,7 @@ h4 {
   }
 }
 .kbd {
-  background: $primary-color;
+  background: $blue;
   padding: 4px 8px;
   border-radius: 8px;
   color: #fff;
@@ -137,13 +143,13 @@ h4 {
   }
 }
 .card {
-  background: $primary-color;
+  background: transparent;
   padding: 32px;
   border-radius: 10px;
-  color: #fff;
+  border: 1px solid $off-gray;
+  color: $black;
   font-size: 24px;
   display: flex;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   flex-direction: column;
 }
 .shadow-md {
@@ -176,7 +182,52 @@ h4 {
   background-color: transparent;
   box-shadow: 0 2px 8px 0 rgba(43, 64, 255, 0.2);
 }
+.app-intro {
+  margin-top: 1rem;
+  padding: 0;
+  text-align: center;
+
+  .intro-text {
+    display: inline;
+    font-size: 32px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid $blue; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    margin-top: 1rem;
+    letter-spacing: 0.15em; /* Adjust as needed */
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  /* The typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: $blue;
+    }
+  }
+}
+.bold {
+  font-weight: 800;
+}
+.light {
+  font-weight: 200;
+}
 .app-outer-wrapper {
+  font-family: "SF Display" !important;
   padding: 64px;
   display: flex;
   justify-content: center;
@@ -190,13 +241,9 @@ h4 {
     border-radius: 15px;
     background: $blue;
   }
-  .bold {
-    font-weight: 800;
-  }
-  .light {
-    font-weight: 200;
-  }
+
   .app-wrapper {
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     opacity: 0;
@@ -217,6 +264,7 @@ h4 {
       margin-right: 8px;
       border-radius: 7px;
     }
+
     .inner-app {
       padding: 24px;
       padding-left: 16px;
@@ -259,10 +307,11 @@ h4 {
       max-width: 365px;
       width: 100%;
       .top-part {
-        img {
+        .profilepic > img {
           margin-right: 12px;
           max-height: 58px;
           max-width: 55px;
+          image-rendering: -webkit-optimize-contrast;
         }
         .flex-v {
           padding-top: 6px;
@@ -322,7 +371,7 @@ h4 {
           }
           .active {
             border-radius: 16px;
-            background: #ededed;
+            background: $gray;
           }
         }
       }
@@ -388,6 +437,22 @@ h4 {
     padding-left: 104px;
     padding-right: 64px;
     padding-bottom: 64px;
+    .download-btn {
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
+      color: $blue;
+      border-radius: 10px;
+      font-size: 21px;
+      -webkit-transition: all 400ms ease;
+      transition: all 400ms ease;
+    }
+    .download-btn:hover {
+      border-style: none;
+      background-color: $blue;
+      box-shadow: 0 2px 8px 0 rgba(43, 64, 255, 0.2);
+      color: #fff;
+    }
     @include media("<=phone") {
       padding: 16px;
       padding-top: 32px;
@@ -437,7 +502,7 @@ h4 {
     text-decoration: none;
   }
   a:hover {
-    color: $primary-color;
+    color: $blue;
   }
   .hero-drawing {
     overflow: hidden;
@@ -547,29 +612,32 @@ h4 {
     padding: 16px;
     padding-top: 32px;
   }
+  .feature-title {
+    color: $black;
+  }
   .feature-link {
-    font-family: "NotoSans-Bold", "sans-serif";
     font-size: 16px;
     text-decoration: none;
-    color: #832a2acf;
-    margin-bottom: 8px;
+    color: $dark-off-gray;
+    margin-bottom: 16px;
+    font-weight: 800;
   }
 
   .feature-link.active {
-    color: white;
+    color: $black;
   }
 
   .sidebar {
     position: sticky;
     top: 16px;
-    background: #f8616d;
+    background: transparent;
+    border: 1px solid $off-gray;
     padding: 16px;
     height: 100%;
     border-radius: 10px;
     margin-right: 32px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     @include media("<=phone") {
       margin: 0;
       top: 48px;
@@ -610,7 +678,7 @@ h4 {
     }
     .img-noahmemoji {
       top: -10px;
-      right: -45px;
+      right: -25px;
     }
     .img-maxmemoji,
     .img-wmemoji {
@@ -633,7 +701,8 @@ h4 {
       }
     }
     h4 {
-      color: #832a2a91;
+      margin-top: 8px;
+      color: $dark-off-gray;
       @include media("<=phone") {
         font-size: 16px;
       }
@@ -689,9 +758,26 @@ h4 {
   align-items: center;
   text-align: center;
   justify-content: center;
-
+  position: relative;
+  border-top: 1px solid $off-gray;
   @include media("<=phone") {
     padding: 16px;
+  }
+
+  .chimp-tree,
+  .chimp-walk {
+    position: absolute;
+    z-index: -2;
+    height: 80%;
+  }
+
+  .chimp-tree {
+    left: 0;
+  }
+  .chimp-walk {
+    height: 45%;
+    right: 0;
+    bottom: 0;
   }
 
   .trial-wrapper {

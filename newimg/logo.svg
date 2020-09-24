@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="863" height="817" viewBox="0 0 863 817">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_23" data-name="Rectangle 23" width="863" height="817" transform="translate(-1602 596)" fill="rgba(255,255,255,0)"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_3" data-name="Mask Group 3" transform="translate(1602 -596)" clip-path="url(#clip-path)">
+    <g id="chimp-logo-vertical-vector" transform="translate(-2163.131 32.774)">
+      <g id="Group_116" data-name="Group 116" transform="translate(509.28 434.328)">
+        <ellipse id="Ellipse_47" data-name="Ellipse 47" cx="166.177" cy="188.524" rx="166.177" ry="188.524" transform="translate(323.716 204.898)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="18.75"/>
+      </g>
+      <g id="Group_117" data-name="Group 117" transform="translate(523.639 435.09)">
+        <path id="Path_200" data-name="Path 200" d="M372.322,475.516a93.1,93.1,0,0,1,103.212-154.5,93.1,93.1,0,0,1,103.212,154.5v52.927a103.212,103.212,0,1,1-206.424,0Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="18.75" fill-rule="evenodd"/>
+      </g>
+      <g id="Group_118" data-name="Group 118" transform="translate(523.639 435.09)">
+        <path id="Path_201" data-name="Path 201" d="M313.362,433.947c-25.426-6.835-44.615-37.167-44.615-73.5,0-41.364,24.865-74.946,55.491-74.946a41.95,41.95,0,0,1,13.291,2.168c-17.788,30.016-28.172,66.141-28.172,104.995A213.229,213.229,0,0,0,313.362,433.947Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="18.75" fill-rule="evenodd"/>
+      </g>
+      <g id="Group_119" data-name="Group 119" transform="translate(1476.36 435.09) rotate(180)">
+        <path id="Path_202" data-name="Path 202" d="M313.362-433.947c-25.426,6.835-44.615,37.167-44.615,73.5,0,41.364,24.865,74.946,55.491,74.946a41.95,41.95,0,0,0,13.291-2.168c-17.788-30.016-28.172-66.141-28.172-104.995A213.229,213.229,0,0,1,313.362-433.947Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="18.75" fill-rule="evenodd"/>
+      </g>
+      <g id="Group_120" data-name="Group 120" transform="translate(-3509.31 -4536.84)">
+        <text id="Chimp" transform="translate(4131.441 5850.176)" font-size="278" font-family="SFProDisplay-Light, SF Pro Display" font-weight="300"><tspan x="0" y="0">Chimp</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

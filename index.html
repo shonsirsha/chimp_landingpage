@@ -184,16 +184,29 @@
         <div class="hero-text-container">
           <nav>
             <div class="brand">
-              <a href="./"><img src="./img/logo.png" /></a>
+              <a href="./"><img src="./newimg/logo.svg" /></a>
             </div>
             <ul>
               <div>
                 <li><a id="toFeatures" href="#features">Features</a></li>
                 <li><a href="#">Imprint</a></li>
+                <li><a id="toDownload" href="#download">Download Chimp</a></li>
               </div>
             </ul>
           </nav>
-          <div class="app-outer-wrapper mt-2">
+          <div class="mt-3 app-intro">
+            <h1 class="mb-1">
+              <span class="bold">All your tasks, projects and contacts</span>
+              <br />
+
+              <span class="light">in one place.</span>
+              <br />
+            </h1>
+            <h3 class="intro-text">
+              <span class="light">Meet Chimp</span>
+            </h3>
+          </div>
+          <div class="app-outer-wrapper">
             <div class="app-wrapper">
               <div class="flex-v">
                 <div class="window-controls-wrapper">
@@ -201,13 +214,26 @@
                   <div class="min win-btn"></div>
                   <div class="max win-btn"></div>
                 </div>
-
+                <div style="display: none" class="app-intro">
+                  <h1 class="mb-1">
+                    <span class="bold"
+                      >All your tasks, projects and contacts</span
+                    >
+                    <span class="light">in one place.</span>
+                  </h1>
+                  <h3 class="intro-text">
+                    <span class="light">Meet Chimp</span>
+                  </h3>
+                </div>
                 <div class="flex-h inner-app">
                   <div class="sidebar-wrapper">
                     <div class="top-part">
                       <div class="flex-h">
                         <div class="profilepic">
-                          <img src="newimg/NoahMemoji.png" />
+                          <img
+                            src="newimg/NoahMemoji.svg"
+                            alt="Profile Picture"
+                          />
                         </div>
 
                         <div class="flex-v">
@@ -331,9 +357,9 @@
                         </button>
                       </div>
                       <div class="mt-2 projects-section">
-                        <p>
-                          <span class="bold">Recent</span>
-                          <span class="light">activities</span>
+                        <p class="proj-name">
+                          <span class="bold">Customised</span>
+                          <span class="light">reminders</span>
                         </p>
                       </div>
 
@@ -371,6 +397,11 @@
               </div>
             </div>
           </div>
+
+          <button class="download-btn blue-btn-outline">
+            Download Chimp to Your Devices
+          </button>
+
           <!--  <h1>Being productive</h1>
           <h1>has never been</h1>
           <h1>easier.</h1>
@@ -427,18 +458,18 @@
             </div>
           </div>
           <img class="img-circle" src="./img/circle.svg" />-->
-          <div class="mt-5 scroll-div">
+          <div class="mt-3 scroll-div">
             <img src="./img/arow-down.svg" class="mr-2" />
             <p class="mute text-light-gray hide-tablet">
-              Press <span class="kbd">F</span> to see our features or
-              <b>scroll down</b> 😊
+              Press <span class="kbd">F</span> to see all of our features or
+              <b>scroll down</b>
             </p>
             <p class="mute text-light-gray tablet">
               Scroll down to see our features
             </p>
           </div>
         </div>
-        <div class="hero-drawing">
+        <!-- <div class="hero-drawing">
           <img class="cblack" src="./img/cblack.svg" />
           <img class="cloud-left" src="./img/cloud-left-top.svg" />
           <img class="cloud-right" src="./img/cloud-right-top.svg" />
@@ -452,38 +483,35 @@
           <img class="t2" src="./img/t2.svg" />
           <img class="t3" src="./img/t3.svg" />
           <img class="c1" src="./img/c1.svg" />
-        </div>
+        </div> -->
       </div>
       <div id="features" class="features-container">
         <!-- <div class="feature-wrapper">
           
         </div> -->
         <div class="sidebar hide-mobile text-light">
-          <h3 class="feature-title">Features:</h3>
+          <h3 class="feature-title ">Features:</h3>
           <a href="#time-tracking" class="mt-1 feature-link active"
             >Time Tracking & Invoice Generation</a
           >
           <a
             href="#contacts-companies-management"
             class="feature-link hide-mobile"
-            >Contacts & Company Management</a
+            >Contacts & Companies Management</a
           >
-          <a href="#commands" class="feature-link">Command Line</a>
+          <a href="#commands" class="feature-link">Executable Commands</a>
         </div>
         <div class="column-container">
           <div id="time-tracking" class="grid-2">
             <div class="card feature-name">
               <h3>Time Tracking & Invoice Generation</h3>
               <h4>with ease.</h4>
-              <img src="./img/woman-memoji.svg" class="img-wmemoji" />
+              <img src="./newimg/Chimp0.png" class="img-wmemoji" />
               <div class="emojis-div">
                 <!-- <div id="sw-0" class="switch shadow-md">
                   <div class="switch-btn"></div>
                 </div> -->
-                <div class="emojis">
-                  <div>⏰</div>
-                  <div>🧾</div>
-                </div>
+                <div class="emojis"></div>
               </div>
             </div>
             <div class="card feature-preview">
@@ -500,16 +528,13 @@
             <div class="card feature-name">
               <h3>Contacts & Companies Management</h3>
               <h4>without hassle.</h4>
-              <img src="./img/memoji.svg" class="img-maxmemoji" />
+              <img src="./newimg/Chimp1.png" class="img-maxmemoji" />
 
               <div class="emojis-div">
                 <!-- <div id="sw-1" class="switch shadow-md">
                   <div class="switch-btn"></div>
                 </div> -->
-                <div class="emojis">
-                  <div>🧑</div>
-                  <div>🏢</div>
-                </div>
+                <div class="emojis"></div>
               </div>
             </div>
           </div>
@@ -517,11 +542,9 @@
             <div class="card feature-name">
               <h3>Executable Commands</h3>
               <h4>Simple, memorable, yet <br />powerful commands.</h4>
-              <img src="./img/memoji0.svg" class="img-noahmemoji" />
+              <img src="./newimg/Chimp2.png" class="img-noahmemoji" />
 
-              <div class="emojis-div">
-                <div style="font-size: 32px">👨‍💻</div>
-              </div>
+              <div class="emojis-div"></div>
             </div>
             <div class="card feature-preview">
               <img class="preview-2" src="./img/gif2.gif" />
@@ -529,9 +552,12 @@
           </div>
         </div>
       </div>
-      <div class="sign-up-container shadow-md">
-        <h2>🧐 Keen to Try?</h2>
-        <p class="mt-1 subtitle">📧 Shoot us your e-mail below!</p>
+      <div id="download" class="sign-up-container">
+        <img src="./newimg/Chimp3.png" class="chimp-tree" />
+        <img src="./newimg/Chimp4.png" class="chimp-walk" />
+
+        <h2>Keen to Try?</h2>
+        <p class="mt-1 subtitle">Shoot us your e-mail below!</p>
         <div class="mt-3 bg-light trial-wrapper shadow-md">
           <p class="mb-1 text-primary try"></p>
 
