@@ -771,7 +771,11 @@ h4 {
 }
 
 .sign-up-container {
-  height: 50vh;
+  height: 100vh;
+
+  @include media("<desktop") {
+    height: 50vh;
+  }
   padding: 64px;
   display: flex;
   flex-direction: column;
@@ -788,7 +792,7 @@ h4 {
   .chimp-walk {
     position: absolute;
     z-index: -2;
-    height: 80%;
+    height: 50%;
     @include media("<tablet") {
       display: none;
     }
@@ -798,7 +802,7 @@ h4 {
     left: 0;
   }
   .chimp-walk {
-    height: 45%;
+    height: 25%;
     right: 0;
     bottom: 0;
   }
