@@ -1,5 +1,6 @@
 //app simulation
 $(document).ready(function () {
+  $(".first").hide();
   let ppWidth = 55 + 12 + 4;
   let nameContainerWidth = $(".profilepic").next().outerWidth();
   $(".sidebar-wrapper").css("width", ppWidth + nameContainerWidth);

@@ -206,3 +206,48 @@ function fireConfetti() {
 //       $(`.preview-${num}`).attr("src", images[num][0]);
 //     }
 //   });
+
+var dataText = ["/create  ", "/call  ", "/start ", "/message "];
+var x = [
+  "📅  🍱  Lunch with Antoniette",
+  "📱 👩🏽  Karyn Bryant",
+  "⏱️ 👨‍💻 <span class='light'>Timer:</span> <span class='bold'>00:32</span>",
+  "🤩 💬 Hey, the latest version is live!",
+];
+let y = 0;
+function typeWriter(text, i, fnCallback) {
+  if (i < text.length) {
+    $(".first").fadeOut(function () {
+      $(".first").html(x[y]);
+
+      document.querySelector("#command-words").innerHTML =
+        text.substring(0, i + 1) +
+        '<span class="typewriter" aria-hidden="true">';
+      setTimeout(function () {
+        typeWriter(text, i + 1, fnCallback);
+      }, 100);
+    });
+  } else if (typeof fnCallback == "function") {
+    if (y === x.length - 1) {
+      y = 0;
+    } else {
+      y++;
+    }
+
+    $(".first").fadeIn();
+    setTimeout(fnCallback, 2000);
+  }
+}
+function StartTextAnimation(i) {
+  if (typeof dataText[i] == "undefined") {
+    setTimeout(function () {
+      StartTextAnimation(0);
+    }, 500);
+  }
+  if (i < dataText.length) {
+    typeWriter(dataText[i], 0, function () {
+      StartTextAnimation(i + 1);
+    });
+  }
+}
+StartTextAnimation(0);
