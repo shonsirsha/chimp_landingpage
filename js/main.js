@@ -94,32 +94,33 @@ $("input[type='submit']").on("click", function (e) {
 
   let email = $(".email_addr").val();
   if (validateEmail(email)) {
-    $(".failedEmail").html("Signing you up...");
-    $(".failedEmail").fadeIn();
-    $.ajax({
-      type: "GET",
-      url: $(".validate").attr("action"),
-      data: $(".validate").serialize(),
-      cache: false,
-      dataType: "jsonp",
-      jsonp: "c",
-      contentType: "application/json; charset=utf-8",
+    // $(".failedEmail").html("Signing you up...");
+    // $(".failedEmail").fadeIn();
+    // $.ajax({
+    //   type: "GET",
+    //   url: $(".validate").attr("action"),
+    //   data: $(".validate").serialize(),
+    //   cache: false,
+    //   dataType: "jsonp",
+    //   jsonp: "c",
+    //   contentType: "application/json; charset=utf-8",
 
-      error: function (error) {},
+    //   error: function (error) {},
 
-      success: function (data) {
-        if (data.result != "success") {
-          //failed;
-          $(".failedEmail").fadeIn();
+    //   success: function (data) {
+    //     if (data.result != "success") {
+    //       //failed;
+    //       $(".failedEmail").fadeIn();
 
-          if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
-            emailSuccess(email); // already subscribed - but just say youre registered.
-          }
-        } else {
-          emailSuccess(email);
-        }
-      },
-    });
+    //       if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
+    //         emailSuccess(email); // already subscribed - but just say youre registered.
+    //       }
+    //     } else {
+    //       emailSuccess(email);
+    //     }
+    //   },
+    // });
+    emailSuccess(email);
   } else {
     $(".failedEmail").html(
       "Oopsie! 🤭 Your e-mail address is <em>invalid.</em> <br /> Please check it again!"
@@ -142,7 +143,7 @@ function emailSuccess(email) {
   $(".try").fadeOut();
   setTimeout(() => {
     $(".try").html(
-      `Woohoo! <br/> You've registered for Chimp 🎉 🥳 <br/><br /> Don't forget to check your email <a class="text-primary" href="mailto:${email}">(${email})</a> 😉 📧 `
+      `<span class="light">Woohoo! <br/> You've registered for<span> <span class="bold">Chimp</span> <br/><br /> <span class="bold">Don't forget to check your email</span> <a class="text-black" href="mailto:${email}">(${email})</a> 😉 📧`
     );
     $(".try").css("textAlign", "center");
     $(".try").css("fontSize", "18");
