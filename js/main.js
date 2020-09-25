@@ -207,12 +207,19 @@ function fireConfetti() {
 //     }
 //   });
 
-var dataText = ["/create  ", "/call  ", "/start ", "/message "];
+var dataText = [
+  "/create  ",
+  "/call  ",
+  "/start ",
+  "/message ",
+  "...and many more...",
+];
 var x = [
   "📅  🍱  Lunch with Antoniette",
   "📱 👩🏽  Karyn Bryant",
-  "⏱️ 👨‍💻 <span class='light'>Timer:</span> <span class='bold'>00:32</span>",
+  "⏱️ 👨‍💻 01:32",
   "🤩 💬 Hey, the latest version is live!",
+  "",
 ];
 let y = 0;
 function typeWriter(text, i, fnCallback) {
