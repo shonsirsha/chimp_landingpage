@@ -1,9 +1,14 @@
 //app simulation
 $(document).ready(function () {
-  $(".first").hide();
-  let ppWidth = 55 + 12 + 4;
-  let nameContainerWidth = $(".profilepic").next().outerWidth();
-  $(".sidebar-wrapper").css("width", ppWidth + nameContainerWidth);
+  function setWidth() {
+    $(".first").hide();
+    let ppWidth = 55 + 12 + 4;
+    let nameContainerWidth = $(".profilepic").next().outerWidth();
+    $(".sidebar-wrapper").css("width", ppWidth + nameContainerWidth);
+
+  }
+  function x() {
+    setWidth();
   setTimeout(() => {
     $(".app-wrapper").css("opacity", 1);
   }, 300);
@@ -25,4 +30,12 @@ $(document).ready(function () {
     }
     $(".proj-name").html(htmlWords);
   }, 1200);
+  }
+
+  x()
+
+  window.onresize = function(event) {
+    setWidth();
+};
 });
+

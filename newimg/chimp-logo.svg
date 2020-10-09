@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 434 447" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-783.011,-776.866)">
+        <g transform="matrix(1,0,0,1,509.28,581.342)">
+            <ellipse cx="489.893" cy="393.422" rx="166.177" ry="188.524" style="fill:none;stroke:black;stroke-width:18.75px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,523.639,582.104)">
+            <path d="M372.322,475.516C350.166,458.49 335.875,431.726 335.875,401.65C335.875,350.264 377.594,308.544 428.981,308.544C445.935,308.544 461.836,313.085 475.534,321.017C489.232,313.085 505.133,308.544 522.087,308.544C573.474,308.544 615.193,350.264 615.193,401.65C615.193,431.726 600.902,458.49 578.746,475.516L578.746,528.443C578.746,585.407 532.498,631.655 475.534,631.655C418.57,631.655 372.322,585.407 372.322,528.443L372.322,475.516Z" style="fill:none;stroke:black;stroke-width:18.75px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,523.639,582.104)">
+            <path d="M313.362,433.947C287.936,427.112 268.747,396.78 268.747,360.443C268.747,319.079 293.612,285.497 324.238,285.497C328.819,285.497 333.27,286.248 337.529,287.665C319.741,317.681 309.357,353.806 309.357,392.66C309.357,406.841 310.74,420.658 313.362,433.947Z" style="fill:none;stroke:black;stroke-width:18.75px;"/>
+        </g>
+        <g transform="matrix(-1,0,0,1,1476.36,582.104)">
+            <path d="M313.362,433.947C287.936,427.112 268.747,396.78 268.747,360.443C268.747,319.079 293.612,285.497 324.238,285.497C328.819,285.497 333.27,286.248 337.529,287.665C319.741,317.681 309.357,353.806 309.357,392.66C309.357,406.841 310.74,420.658 313.362,433.947Z" style="fill:none;stroke:black;stroke-width:18.75px;"/>
+        </g>
+    </g>
+</svg>

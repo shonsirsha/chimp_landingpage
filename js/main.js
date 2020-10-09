@@ -77,9 +77,9 @@ $window.scroll(function () {
   if (cc < 0) cc = cc * -1;
   let c = $("#commands").offset().top - $(".browser-border").offset().top;
   if (c < 0) c = c * -1;
-  distances[0] = tt;
-  distances[1] = cc;
-  distances[2] = c;
+  distances[0] = cc;
+  distances[1] = c;
+  distances[2] = tt;
   let tempDist = distances.slice();
   tempDist.sort(function (a, b) {
     return a - b;
@@ -94,32 +94,8 @@ $("input[type='submit']").on("click", function (e) {
 
   let email = $(".email_addr").val();
   if (validateEmail(email)) {
-    // $(".failedEmail").html("Signing you up...");
-    // $(".failedEmail").fadeIn();
-    // $.ajax({
-    //   type: "GET",
-    //   url: $(".validate").attr("action"),
-    //   data: $(".validate").serialize(),
-    //   cache: false,
-    //   dataType: "jsonp",
-    //   jsonp: "c",
-    //   contentType: "application/json; charset=utf-8",
-
-    //   error: function (error) {},
-
-    //   success: function (data) {
-    //     if (data.result != "success") {
-    //       //failed;
-    //       $(".failedEmail").fadeIn();
-
-    //       if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
-    //         emailSuccess(email); // already subscribed - but just say youre registered.
-    //       }
-    //     } else {
-    //       emailSuccess(email);
-    //     }
-    //   },
-    // });
+  
+    
     emailSuccess(email);
   } else {
     $(".failedEmail").html(
