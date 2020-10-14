@@ -69,6 +69,12 @@ h4 {
     display: none !important;
   }
 }
+.hide-desktop {
+  display: none !important;
+  @include media("<=1070px") {
+    display: block !important;
+  }
+}
 .site-wrapper {
   @include media("<=phone") {
     overflow-x: hidden;
@@ -630,6 +636,13 @@ li {
 .features-container {
   padding: 64px;
   display: flex;
+  .sw {
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .blue-btn {
+    color: #fff;
+  }
   @include media("<=phone") {
     flex-direction: column;
     padding: 16px;
@@ -776,20 +789,15 @@ li {
       @include media("<=1070px") {
         margin-top: 32px;
       }
-      .emojis {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 16px;
-      }
     }
   }
   .feature-preview {
     background: none;
     padding: 0;
+    border: none;
     img {
       border-radius: 10px;
       max-width: 100%;
-      min-height: 100%;
     }
   }
 }
@@ -798,7 +806,7 @@ li {
   height: 100vh;
 
   @include media("<desktop") {
-    height: 50vh;
+    height: 85vh;
   }
   padding: 64px;
   display: flex;

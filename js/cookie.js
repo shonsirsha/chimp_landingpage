@@ -43,7 +43,6 @@ function setCookie(cname, cvalue, exdays) {
           setCookie("chimpCookieNoticeAgreed", "false", 365);
           $(elCookieNotice).fadeToggle();
         });
-        console.log(cookieNoticeRevokeButton);
 
         if (cookieNoticeRevokeButton) {
           cookieNoticeRevokeButton.addEventListener("click", function() {

@@ -1,4 +1,28 @@
+var currentUrl = $(location)
+var result = currentUrl.attr("pathname");
+
+let wordsArr = []
+
+if(result == '/de' || result == '/'){
+  wordsArr = [
+    "Letzte Aktivitäten",
+    "Neuste Projekte ",
+    "Zeit verbracht",
+    "Todos",
+    "Personalisierte Erinnerungen",
+  ];
+}else if(result == '/en'){
+  wordsArr = [
+    "Recent activites",
+    "Latest projects",
+    "Time spent",
+    "Todos",
+    "Customised reminders",
+  ];
+}
+
 //app simulation
+
 $(document).ready(function () {
   function setWidth() {
     $(".first").hide();
@@ -13,13 +37,6 @@ $(document).ready(function () {
     $(".app-wrapper").css("opacity", 1);
   }, 300);
 
-  let wordsArr = [
-    "Recent activites",
-    "Latest projects",
-    "Time spent",
-    "Todos",
-    "Customised reminders",
-  ];
 
   var index = 0;
   setInterval(function () {

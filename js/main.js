@@ -1,15 +1,12 @@
-// let images = [
-//   ["./img/gif0.gif", "./img/gif1.gif"],
-//   ["./img/gif2.gif", "./img/gif3.gif"],
-//   ["./img/gif0.gif"],
-// ];
+var currentUrl = $(location)
+var result = currentUrl.attr("pathname");
 
-// for (let i = 0; i < images.length; i++) {
-//   for (let x = 0; x < images[i].length; x++) {
-//     $(`.preview-${i}`).attr("src", images[i][0]);
-//   }
-// }
-
+$(".lang_link").each(function(){
+  if("/"+$(this).html().toLowerCase() === result){
+    $(this).css("font-weight", "800")
+    $(this).css("color", "#1b07f2")
+  }
+})
 $(".switch").on("click", function () {
   $(this).find(".switch-btn").toggleClass("active");
   let num = getSecondPart($(this).attr("id"));
@@ -94,9 +91,32 @@ $("input[type='submit']").on("click", function (e) {
 
   let email = $(".email_addr").val();
   if (validateEmail(email)) {
-  
-    
-    emailSuccess(email);
+    $(".failedEmail").html("Signing you up...");
+    $(".failedEmail").fadeIn();
+    $.ajax({
+      type: "GET",
+      url: $(".validate").attr("action"),
+      data: $(".validate").serialize(),
+      cache: false,
+      dataType: "jsonp",
+      jsonp: "c",
+      contentType: "application/json; charset=utf-8",
+
+      error: function (error) {},
+
+      success: function (data) {
+        if (data.result != "success") {
+          //failed;
+          $(".failedEmail").fadeIn();
+
+          if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
+            emailSuccess(email); // already subscribed - but just say youre registered.
+          }
+        } else {
+          emailSuccess(email);
+        }
+      },
+    });
   } else {
     $(".failedEmail").html(
       "Oopsie! 🤭 Your e-mail address is <em>invalid.</em> <br /> Please check it again!"
@@ -173,15 +193,6 @@ function fireConfetti() {
     startVelocity: 45,
   });
 }
-// $(".switch").on("click", function () {
-//     $(this).find(".switch-btn").toggleClass("active");
-//     let num = getSecondPart($(this).attr("id"));
-//     if ($(this).find(".switch-btn").hasClass("active")) {
-//       $(`.preview-${num}`).attr("src", images[num][1]);
-//     } else {
-//       $(`.preview-${num}`).attr("src", images[num][0]);
-//     }
-//   });
 
 var dataText = [
   "/create  ",
@@ -234,3 +245,38 @@ function StartTextAnimation(i) {
   }
 }
 StartTextAnimation(0);
+
+$(".sw").on("click",function(){
+  if($(this).hasClass("swi")){
+    $(".swi").addClass("blue-btn")
+    $(".swi").removeClass("blue-btn-outline")
+    $(".swx").removeClass("blue-btn")
+    $(".swx").addClass("blue-btn-outline")
+  }
+  if($(this).hasClass("swx")){
+    $(".swx").addClass("blue-btn")
+    $(".swx").removeClass("blue-btn-outline")
+    $(".swi").removeClass("blue-btn")
+    $(".swi").addClass("blue-btn-outline")
+  }
+ 
+  if($(this).hasClass("f0")){
+    if($(".img_0").hasClass("hide")){
+      $(".img_01").fadeOut(function(){
+        $(".img_01").addClass("hide")
+        $(".img_0").fadeIn();
+      })
+    }
+  }
+
+  if($(this).hasClass("f0_1")){
+    if($(".img_01").hasClass("hide")){
+      $(".img_0").fadeOut(function(){
+        $(".img_0").addClass("hide")
+        $(".img_01").fadeIn();
+      })
+    }
+  }
+
+ 
+})
