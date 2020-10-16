@@ -216,23 +216,33 @@
       <div class="hero-container">
         <div class="hero-text-container">
           <nav>
-            <div class="brand">
-              <a href="./"><img src="./newimg/chimp-logo.svg" /></a>
-            </div>
-            <ul style="width: 100%">
-              <div class="flex-h" style="width: 100%">
-                <div>
-                  <li><a id="toFeatures" multi_lang="NAV_LINK__FEATURES" href="#features">Features</a></li>
-                  <li><a multi_lang="NAV_LINK__IMPRINT" href="./impressum.html">Imprint</a></li>
-                  <li><a multi_lang="NAV_LINK__GET_CHIMP" id="toDownload" href="#download">Get Chimp</a></li>
-                </div>
-                <div style="margin-left: auto;">
-                  <li><a style="cursor: pointer;" class="lang_link " >DE</a></li>
-                  <li><a style="cursor: pointer;" class="lang_link ">EN</a></li>
-                </div>
+           <div class="flex-v" style="width: 100%">
+            <div class="flex-h" style="width: 100%">
+              <div class="brand">
+                <a href="./"><img src="./newimg/chimp-logo.svg" /></a>
               </div>
+              <ul style="width: 100%">
+                <div class="flex-h" style="width: 100%">
+                  <div>
+                    <li><a id="toFeatures" multi_lang="NAV_LINK__FEATURES" href="#features">Features</a></li>
+                    <li><a multi_lang="NAV_LINK__IMPRINT" href="./impressum.html">Imprint</a></li>
+                    <li><a multi_lang="NAV_LINK__GET_CHIMP" id="toDownload" href="#download">Get Chimp</a></li>
+                  </div>
+                  <div class="hide-tablet-f" style="margin-left: auto;">
+                    <li><a style="cursor: pointer;" class="lang_link " >DE</a></li>
+                    <li><a style="cursor: pointer;" class="lang_link ">EN</a></li>
+                  </div>
+                </div>
+              </ul>
+            </div>
             
-            </ul>
+
+            <div style="list-style: none;" class="mt-2 hide-desktop lang-switcher-mobile shadow-md">
+              <li><a style="cursor: pointer;" class="lang_link " >DE</a></li>
+              <li><a style="cursor: pointer;" class="lang_link ">EN</a></li>
+            </div>
+           </div>
+           
           </nav>
           <div class="mt-3 app-intro">
             <h1 class="mb-1">
@@ -436,7 +446,7 @@
               Press <span class="kbd">F</span> to see all of our features or
               <b>scroll down</b>
             </p>
-            <p class="mute text-light-gray tablet">
+            <p  multi_lang="HERO__PRESS_F_MOBILE" class="mute text-light-gray tablet">
               Scroll down to see our features
             </p>
           </div>

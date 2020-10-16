@@ -3,23 +3,7 @@ var result = currentUrl.attr("pathname");
 
 let wordsArr = []
 
-if(result == '/de' || result == '/'){
-  wordsArr = [
-    "Letzte Aktivitäten",
-    "Neuste Projekte ",
-    "Zeit verbracht",
-    "Todos",
-    "Personalisierte Erinnerungen",
-  ];
-}else if(result == '/en'){
-  wordsArr = [
-    "Recent activites",
-    "Latest projects",
-    "Time spent",
-    "Todos",
-    "Customised reminders",
-  ];
-}
+
 
 //app simulation
 
@@ -40,6 +24,26 @@ $(document).ready(function () {
 
   var index = 0;
   setInterval(function () {
+    wordsArr = []
+    if($(location).attr("pathname") == '/de' || $(location).attr("pathname") == '/'){
+      wordsArr = [
+        "Letzte Aktivitäten",
+        "Neuste Projekte ",
+        "Zeit verbracht",
+        "Todos",
+        "Personalisierte Erinnerungen",
+      ];
+    }else if($(location).attr("pathname") == '/en'){
+      wordsArr = [
+        "Recent activites",
+        "Latest projects",
+        "Time spent",
+        "Todos",
+        "Customised reminders",
+      ];
+    }
+
+
     let words = wordsArr[index++ % wordsArr.length].split(" ");
     let htmlWords = `<span class="bold">${words[0]}</b>`;
     if (words.length > 1) {

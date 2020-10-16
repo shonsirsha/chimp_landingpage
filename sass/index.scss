@@ -29,6 +29,20 @@ body {
 .flex-h {
   display: flex;
 }
+.lang-switcher-mobile {
+  border-radius: 8px;
+  position: fixed;
+  min-width: 55px;
+  opacity: 0.9;
+  z-index: 99;
+  background: white;
+  right: 8px;
+  bottom: 20px;
+  padding: 8px;
+  li {
+    margin: 0;
+  }
+}
 .flex-v {
   display: flex;
   flex-direction: column;
@@ -107,6 +121,9 @@ ul {
 
 li {
   margin-right: 32px;
+  @include media("<=1070px") {
+    margin-right: 16px;
+  }
 }
 .impressum-container {
   padding-top: 46px;

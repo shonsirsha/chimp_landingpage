@@ -1,12 +1,12 @@
-var currentUrl = $(location)
+var currentUrl = $(location);
 var result = currentUrl.attr("pathname");
 
-$(".lang_link").each(function(){
-  if("/"+$(this).html().toLowerCase() === result){
-    $(this).css("font-weight", "800")
-    $(this).css("color", "#1b07f2")
+$(".lang_link").each(function () {
+  if ("/" + $(this).html().toLowerCase() === result) {
+    $(this).css("font-weight", "800");
+    $(this).css("color", "#1b07f2");
   }
-})
+});
 $(".switch").on("click", function () {
   $(this).find(".switch-btn").toggleClass("active");
   let num = getSecondPart($(this).attr("id"));
@@ -194,19 +194,13 @@ function fireConfetti() {
   });
 }
 
-var dataText = [
-  "/create  ",
-  "/call  ",
-  "/start ",
-  "/message ",
-  "...and many more...",
-];
+var dataText = ["/create  ", "/call  ", "/start ", "/message "];
+
 var x = [
   "📅  🍱  Lunch with Antoniette",
   "📱 👩🏽  Karyn Bryant",
   "⏱️ 👨‍💻 01:32",
   "🤩 💬 Hey, the latest version is live!",
-  "",
 ];
 let y = 0;
 function typeWriter(text, i, fnCallback) {
@@ -246,37 +240,35 @@ function StartTextAnimation(i) {
 }
 StartTextAnimation(0);
 
-$(".sw").on("click",function(){
-  if($(this).hasClass("swi")){
-    $(".swi").addClass("blue-btn")
-    $(".swi").removeClass("blue-btn-outline")
-    $(".swx").removeClass("blue-btn")
-    $(".swx").addClass("blue-btn-outline")
+$(".sw").on("click", function () {
+  if ($(this).hasClass("swi")) {
+    $(".swi").addClass("blue-btn");
+    $(".swi").removeClass("blue-btn-outline");
+    $(".swx").removeClass("blue-btn");
+    $(".swx").addClass("blue-btn-outline");
   }
-  if($(this).hasClass("swx")){
-    $(".swx").addClass("blue-btn")
-    $(".swx").removeClass("blue-btn-outline")
-    $(".swi").removeClass("blue-btn")
-    $(".swi").addClass("blue-btn-outline")
+  if ($(this).hasClass("swx")) {
+    $(".swx").addClass("blue-btn");
+    $(".swx").removeClass("blue-btn-outline");
+    $(".swi").removeClass("blue-btn");
+    $(".swi").addClass("blue-btn-outline");
   }
- 
-  if($(this).hasClass("f0")){
-    if($(".img_0").hasClass("hide")){
-      $(".img_01").fadeOut(function(){
-        $(".img_01").addClass("hide")
+
+  if ($(this).hasClass("f0")) {
+    if ($(".img_0").hasClass("hide")) {
+      $(".img_01").fadeOut(function () {
+        $(".img_01").addClass("hide");
         $(".img_0").fadeIn();
-      })
+      });
     }
   }
 
-  if($(this).hasClass("f0_1")){
-    if($(".img_01").hasClass("hide")){
-      $(".img_0").fadeOut(function(){
-        $(".img_0").addClass("hide")
+  if ($(this).hasClass("f0_1")) {
+    if ($(".img_01").hasClass("hide")) {
+      $(".img_0").fadeOut(function () {
+        $(".img_0").addClass("hide");
         $(".img_01").fadeIn();
-      })
+      });
     }
   }
-
- 
-})
+});
