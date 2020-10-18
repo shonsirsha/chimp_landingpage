@@ -1,5 +1,8 @@
-var currentUrl = $(location);
-var result = currentUrl.attr("pathname");
+let language = localStorage.getItem("chimp_lang");
+if (language === null) {
+  console.log("langnull");
+  language = "/en";
+}
 var lang = {
   de: {
     NAV_LINK__FEATURES: "Features",
@@ -55,7 +58,7 @@ var lang = {
   },
   en: {
     NAV_LINK__FEATURES: "Features",
-    NAV_LINK__IMPRINT: "Impressum",
+    NAV_LINK__IMPRINT: "Imprint",
     NAV_LINK__GET_CHIMP: "Get Chimp",
     HERO__OPENING_WORD: "All your tasks, projects and contacts",
     HERO__SUBTITLE: "in one place.",
@@ -106,13 +109,15 @@ var lang = {
     COOKIES__NO: "Not for me!",
   },
 };
-if (result == "/de" || result == "/") {
+if (language == "de") {
   toGerman();
-} else if (result == "/en") {
+} else if (language == "en") {
   toEnglish();
 }
 
 $(".lang_link").on("click", function () {
+  localStorage.removeItem("chimp_lang");
+
   if ($(this).html().toLowerCase() === "de") {
     localStorage.setItem("chimp_lang", "de");
     window.history.pushState({}, null, `/de`);
@@ -122,8 +127,6 @@ $(".lang_link").on("click", function () {
     window.history.pushState({}, null, `/en`);
     toEnglish();
   }
-
-  localStorage.removeItem("chimp_lang");
 
   $(".lang_link").each(function () {
     if ("/" + $(this).html().toLowerCase() === $(location).attr("pathname")) {

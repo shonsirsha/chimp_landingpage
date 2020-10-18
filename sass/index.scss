@@ -131,13 +131,17 @@ li {
   padding-right: 64px;
   padding-bottom: 64px;
   text-align: justify;
-
+  overflow-y: hidden;
   a {
     text-decoration: none;
   }
   p {
     font-size: 16px;
     margin-bottom: 8px;
+  }
+
+  @include media("<=1070px") {
+    padding: 32px 16px;
   }
 }
 .brand {
@@ -244,6 +248,7 @@ li {
   }
 }
 .blue-btn {
+  color: #fff;
   border-style: none;
   background-color: $blue;
   box-shadow: 0 2px 8px 0 rgba(43, 64, 255, 0.2);
@@ -513,7 +518,6 @@ li {
       margin-left: auto;
       margin-right: auto;
       padding: 20px;
-      color: $blue;
       border-radius: 10px;
       font-size: 21px;
       -webkit-transition: all 400ms ease;
@@ -521,9 +525,9 @@ li {
     }
     .download-btn:hover {
       border-style: none;
-      background-color: $blue;
+      background-color: #fff;
+      color: $blue;
       box-shadow: 0 2px 8px 0 rgba(43, 64, 255, 0.2);
-      color: #fff;
     }
     @include media("<=phone") {
       padding: 16px;
