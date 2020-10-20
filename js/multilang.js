@@ -32,9 +32,9 @@ var lang = {
 
     FEATURE_MENU__FEATURES: "Features",
 
-    FEATURE_MENU__CCM: "Kontakte & Kunden Management", // contacts company management
+    FEATURE_MENU__CCM: "Kontakte & Kundenmanagement", // contacts company management
     FEATURE_MENU__EC: "Kurzbefehle", // exec.command,
-    FEATURE_MENU__TTIC: "Zeiterfassung & Rechnungserstellung", // time tracking &invoice generation
+    FEATURE_MENU__TTIC: "Zeiterfassung & Projektmanagement", // time tracking &invoice generation
 
     //feature
     FEATURE_SUBTITLE__CCM: "leicht gemacht", // time tracking &invoice generation
