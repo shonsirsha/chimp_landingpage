@@ -1,8 +1,7 @@
-var currentUrl = $(location);
-var result = currentUrl.attr("pathname");
+var result = localStorage.getItem("chimp_lang");
 
 $(".lang_link").each(function () {
-  if ("/" + $(this).html().toLowerCase() === result) {
+  if ($(this).html().toLowerCase() === result) {
     $(this).css("font-weight", "800");
     $(this).css("color", "#1b07f2");
   }
