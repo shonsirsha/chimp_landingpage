@@ -272,6 +272,8 @@ var featureDetailEn = [
   '<span class="bold">English #3 ipsum dolor</span> sit amet,consectetur adipiscing elit, sed do eiusmod tempor.<br /><br />Consectetur adipiscing elit, sed do eiusmod tempor.',
 ];
 $(".feature-card").on("click", function () {
+  initialLaunch++;
+
   var resultLoc = localStorage.getItem("chimp_lang");
   var featureNum = $(this).attr("featureNum");
   var width = $(window).width();
@@ -291,10 +293,12 @@ $(".feature-card").on("click", function () {
   } else {
     $(".feature-body-text").html(featureDetailEn[parseInt(featureNum - 1)]);
   }
-  $("html, body").animate(
-    {
-      scrollTop: $(".feature-body-detail").offset().top - minus,
-    },
-    550
-  );
+  if (initialLaunch > 1) {
+    $("html, body").animate(
+      {
+        scrollTop: $(".feature-body-detail").offset().top - minus,
+      },
+      550
+    );
+  }
 });

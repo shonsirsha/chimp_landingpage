@@ -500,6 +500,9 @@ li {
   max-width: 1236px;
   width: 100%;
   padding: 0 40px;
+  @include media("<768px") {
+    padding: 0 16px;
+  }
 }
 .hero-container {
   position: relative;
@@ -514,6 +517,9 @@ li {
   background: #ffffff;
   grid-template-columns: 100%;
   z-index: -1;
+  @include media("<768px") {
+    padding: 0 16px;
+  }
   @include media(">phone", "<=1070px") {
   }
   @include media("<=1070px") {

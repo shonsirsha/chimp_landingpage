@@ -3,7 +3,6 @@ if (language === null) {
   language = "/en";
 }
 $('[featureNum="1"]').click();
-
 var lang = {
   de: {
     NAV_LINK__FEATURES: "Features",
@@ -118,7 +117,6 @@ if (language == "de") {
 
 $(".lang_link").on("click", function () {
   localStorage.removeItem("chimp_lang");
-  1;
   if ($(this).html().toLowerCase() === "de") {
     localStorage.setItem("chimp_lang", "de");
     window.history.pushState({}, null, `/de`);
@@ -138,6 +136,7 @@ $(".lang_link").on("click", function () {
       $(this).css("color", "#747374");
     }
   });
+  initialLaunch = 0;
   $('[featureNum="1"]').click();
 });
 
