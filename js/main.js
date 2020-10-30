@@ -1,21 +1,10 @@
 var result = localStorage.getItem("chimp_lang");
+$('[imageNum="2"], [imageNum="3"]').hide();
 
 $(".lang_link").each(function () {
   if ($(this).html().toLowerCase() === result) {
     $(this).css("font-weight", "800");
     $(this).css("color", "#1b07f2");
-  }
-});
-$(".switch").on("click", function () {
-  $(this).find(".switch-btn").toggleClass("active");
-  let num = getSecondPart($(this).attr("id"));
-
-  if ($(this).find(".switch-btn").hasClass("active")) {
-    $(`.preview-${num}.img-0`).addClass("hide");
-    $(`.preview-${num}.img-1`).removeClass("hide");
-  } else {
-    $(`.preview-${num}.img-0`).removeClass("hide");
-    $(`.preview-${num}.img-1`).addClass("hide");
   }
 });
 
@@ -52,38 +41,38 @@ $("a").on("click", function (event) {
   }
 });
 
-var distance0 = $("#time-tracking").offset().top;
-var distance1 = $("#contacts-companies-management").offset().top;
-var distance2 = $("#commands").offset().top;
+// var distance0 = $("#time-tracking").offset().top;
+// var distance1 = $("#contacts-companies-management").offset().top;
+// var distance2 = $("#commands").offset().top;
 
-var $window = $(window);
+// var $window = $(window);
 
-var scrollTop = $(window).scrollTop(),
-  elementOffset = $("#time-tracking").offset().top,
-  distance = elementOffset - scrollTop;
+// var scrollTop = $(window).scrollTop(),
+//   elementOffset = $("#time-tracking").offset().top,
+//   distance = elementOffset - scrollTop;
 
-let distances = [0, 0, 0];
+// let distances = [0, 0, 0];
 
-$window.scroll(function () {
-  let tt = $("#time-tracking").offset().top - $(".browser-border").offset().top;
-  if (tt < 0) tt = tt * -1;
-  let cc =
-    $("#contacts-companies-management").offset().top -
-    $(".browser-border").offset().top;
-  if (cc < 0) cc = cc * -1;
-  let c = $("#commands").offset().top - $(".browser-border").offset().top;
-  if (c < 0) c = c * -1;
-  distances[0] = cc;
-  distances[1] = c;
-  distances[2] = tt;
-  let tempDist = distances.slice();
-  tempDist.sort(function (a, b) {
-    return a - b;
-  });
-  let ix = distances.indexOf(tempDist[0]);
-  $(`.feature-link`).removeClass("active");
-  $(`.feature-link`).eq(ix).addClass("active");
-});
+// $window.scroll(function () {
+//   let tt = $("#time-tracking").offset().top - $(".browser-border").offset().top;
+//   if (tt < 0) tt = tt * -1;
+//   let cc =
+//     $("#contacts-companies-management").offset().top -
+//     $(".browser-border").offset().top;
+//   if (cc < 0) cc = cc * -1;
+//   let c = $("#commands").offset().top - $(".browser-border").offset().top;
+//   if (c < 0) c = c * -1;
+//   distances[0] = cc;
+//   distances[1] = c;
+//   distances[2] = tt;
+//   let tempDist = distances.slice();
+//   tempDist.sort(function (a, b) {
+//     return a - b;
+//   });
+//   let ix = distances.indexOf(tempDist[0]);
+//   $(`.feature-link`).removeClass("active");
+//   $(`.feature-link`).eq(ix).addClass("active");
+// });
 
 $("input[type='submit']").on("click", function (e) {
   e.preventDefault();
@@ -270,4 +259,42 @@ $(".sw").on("click", function () {
       });
     }
   }
+});
+var featureDetailDe = [
+  '<span class="bold">Deutsch #1 ipsum dolor</span> sit amet,consectetur adipiscing elit, sed do eiusmod tempor.<br /><br />Consectetur adipiscing elit, sed do eiusmod tempor.',
+  '<span class="bold">Deutsch #2 ipsum dolor</span> sit amet,consectetur adipiscing elit, sed do eiusmod tempor.<br /><br />Consectetur adipiscing elit, sed do eiusmod tempor.',
+  '<span class="bold">Deutsch #3 ipsum dolor</span> sit amet,consectetur adipiscing elit, sed do eiusmod tempor.<br /><br />Consectetur adipiscing elit, sed do eiusmod tempor.',
+];
+
+var featureDetailEn = [
+  '<span class="bold">English #1 ipsum dolor</span> sit amet,consectetur adipiscing elit, sed do eiusmod tempor.<br /><br />Consectetur adipiscing elit, sed do eiusmod tempor.',
+  '<span class="bold">English #2 ipsum dolor</span> sit amet,consectetur adipiscing elit, sed do eiusmod tempor.<br /><br />Consectetur adipiscing elit, sed do eiusmod tempor.',
+  '<span class="bold">English #3 ipsum dolor</span> sit amet,consectetur adipiscing elit, sed do eiusmod tempor.<br /><br />Consectetur adipiscing elit, sed do eiusmod tempor.',
+];
+$(".feature-card").on("click", function () {
+  var resultLoc = localStorage.getItem("chimp_lang");
+  var featureNum = $(this).attr("featureNum");
+  var width = $(window).width();
+  var minus = 400;
+  if (width > 1070) {
+    minus = 120;
+  }
+  $(".feature-card").removeClass("active");
+  $(this).addClass("active");
+  $(".img-feature").fadeOut(200, function () {
+    setTimeout(() => {
+      $(`[imageNum="${featureNum}"]`).fadeIn(200);
+    }, 500);
+  });
+  if (resultLoc === "de") {
+    $(".feature-body-text").html(featureDetailDe[parseInt(featureNum - 1)]);
+  } else {
+    $(".feature-body-text").html(featureDetailEn[parseInt(featureNum - 1)]);
+  }
+  $("html, body").animate(
+    {
+      scrollTop: $(".feature-body-detail").offset().top - minus,
+    },
+    550
+  );
 });

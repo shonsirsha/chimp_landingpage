@@ -1,8 +1,9 @@
 let language = localStorage.getItem("chimp_lang");
 if (language === null) {
-  console.log("langnull");
   language = "/en";
 }
+$('[featureNum="1"]').click();
+
 var lang = {
   de: {
     NAV_LINK__FEATURES: "Features",
@@ -37,9 +38,9 @@ var lang = {
     FEATURE_MENU__TTIC: "Zeiterfassung & Projektmanagement", // time tracking &invoice generation
 
     //feature
-    FEATURE_SUBTITLE__CCM: "leicht gemacht", // time tracking &invoice generation
+    FEATURE_SUBTITLE__CCM: "leicht gemacht.", // time tracking &invoice generation
     FEATURE_SUBTITLE__EC: "Einfache aber starke Kurzbefehle",
-    FEATURE_SUBTITLE_TTIC: "ohne Probleme",
+    FEATURE_SUBTITLE_TTIC: "ohne Probleme.",
 
     //contacts
 
@@ -63,7 +64,7 @@ var lang = {
     HERO__OPENING_WORD: "All your tasks, projects and contacts",
     HERO__SUBTITLE: "in one place.",
     HERO__MEET_CHIMP: "Meet Chimp",
-    HERO__CTA_BTN: "Get Chimp to Your Devices",
+    HERO__CTA_BTN: "Get Chimp for Your Devices",
     HERO__PRESS_F:
       'Press <span class="kbd">F</span> to see all of our features or <b>scroll down</b>',
     HERO__PRESS_F_MOBILE: "Scroll down to see our features",
@@ -86,7 +87,7 @@ var lang = {
 
     FEATURE_MENU__CCM: "Contacts & Companies Management", // contacts company management
     FEATURE_MENU__EC: "Executable Commands", // exec.command,
-    FEATURE_MENU__TTIC: "Time Tracking & Invoice Generation", // time tracking &invoice generation
+    FEATURE_MENU__TTIC: "Time Tracking & Project Management", // time tracking &invoice generation
 
     //feature
     FEATURE_SUBTITLE__CCM: "without hassle.", // time tracking &invoice generation
@@ -117,7 +118,7 @@ if (language == "de") {
 
 $(".lang_link").on("click", function () {
   localStorage.removeItem("chimp_lang");
-
+  1;
   if ($(this).html().toLowerCase() === "de") {
     localStorage.setItem("chimp_lang", "de");
     window.history.pushState({}, null, `/de`);
@@ -137,6 +138,7 @@ $(".lang_link").on("click", function () {
       $(this).css("color", "#747374");
     }
   });
+  $('[featureNum="1"]').click();
 });
 
 function toGerman() {
