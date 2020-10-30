@@ -293,12 +293,12 @@ $(".feature-card").on("click", function () {
   } else {
     $(".feature-body-text").html(featureDetailEn[parseInt(featureNum - 1)]);
   }
-  if (initialLaunch > 1) {
-    $("html, body").animate(
-      {
-        scrollTop: $(".feature-body-detail").offset().top - minus,
-      },
-      550
-    );
-  }
+  // if (initialLaunch > 1) {
+  //   $("html, body").animate(
+  //     {
+  //       scrollTop: $(".feature-body-detail").offset().top - minus,
+  //     },
+  //     550
+  //   );
+  // }
 });
