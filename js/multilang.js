@@ -46,7 +46,7 @@ var lang = {
     CONTACT__OPENING_TEXT:
       '<span class="light">Hast du Lust Chimp</span> <span class="bold">zu testen?</span>',
     CONTACT__CONTENT_TEXT:
-      '<span class="bold">Chimp erscheint diesen Herbst</span> <span class="light">für MacOS, und iOS</span> <span class="bold">folgt kurz danach!</span>',
+      '<span class="bold">Die Chimp Beta Version erscheint März 2021</span> <span class="light">für MacOS, und iOS</span> <span class="bold">folgt kurz danach!</span>',
     CONTACT__CONTENT_TEXT_2:
       '<span class="light">Registriere dich</span> <span class="bold">und gehöre zu den ersten Nutzern!</span>',
 
@@ -98,7 +98,7 @@ var lang = {
     CONTACT__OPENING_TEXT:
       '<span class="light">Keen to </span><span class="bold">Try?</span>',
     CONTACT__CONTENT_TEXT:
-      ' <span class="bold">Chimp is rolling out this fall</span><span class="light"> to MacOS devices, and iOS devices</span> <span class="bold">soon after!</span>',
+      ' <span class="bold">Chimp Beta Version is rolling out March 2021</span><span class="light"> to MacOS devices, and iOS devices</span> <span class="bold">soon after!</span>',
     CONTACT__CONTENT_TEXT_2:
       ' <span class="light">Shoot us your e-mail below </span><span class="bold">and be first to try!</span>',
 
