@@ -272,27 +272,34 @@ var featureDetailEn = [
   '<span class="bold">English #3 ipsum dolor</span> sit amet,consectetur adipiscing elit, sed do eiusmod tempor.<br /><br />Consectetur adipiscing elit, sed do eiusmod tempor.',
 ];
 $(".feature-card").on("click", function () {
-  initialLaunch++;
+  // Start animation. Add a css class or do this by javascript or whatever
 
-  var resultLoc = localStorage.getItem("chimp_lang");
-  var featureNum = $(this).attr("featureNum");
-  var width = $(window).width();
-  var minus = 400;
-  if (width > 1070) {
-    minus = 120;
-  }
   $(".feature-card").removeClass("active");
   $(this).addClass("active");
-  $(".img-feature").fadeOut(200, function () {
+  var resultLoc = localStorage.getItem("chimp_lang");
+  var featureNum = $(this).attr("featureNum");
+  // var width = $(window).width();
+  // var minus = 400;
+  // if (width > 1070) {
+  //   minus = 120;
+  // }
+
+  $(`.img-feature`).fadeOut(200, function () {
     setTimeout(() => {
-      $(`[imageNum="${featureNum}"]`).fadeIn(200);
-    }, 500);
+      $(`.img-feature`).attr(
+        "src",
+        `../newimg/GroupedFeature${featureNum}.png`
+      );
+      $(`.img-feature`).fadeIn();
+    }, 150);
   });
+
   if (resultLoc === "de") {
     $(".feature-body-text").html(featureDetailDe[parseInt(featureNum - 1)]);
   } else {
     $(".feature-body-text").html(featureDetailEn[parseInt(featureNum - 1)]);
   }
+
   // if (initialLaunch > 1) {
   //   $("html, body").animate(
   //     {
