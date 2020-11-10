@@ -1,0 +1,90 @@
+<div id="features" class="features-container">
+  <div class="sidebar hide-tablet-f text-light">
+    <h3 class="feature-title" multi_lang="FEATURE_MENU__FEATURES">Features:</h3>
+    <a
+      href="#contacts-companies-management"
+      class="feature-link hide-mobile mt-1"
+      multi_lang="FEATURE_MENU__CCM"
+      >Contacts & Companies Management</a
+    >
+    <a href="#commands" class="feature-link" multi_lang="FEATURE_MENU__EC"
+      >Executable Commands</a
+    >
+
+    <a
+      href="#time-tracking"
+      class="feature-link active"
+      multi_lang="FEATURE_MENU__TTIC"
+      >Time Tracking & Invoice Generation</a
+    >
+    <button class="sw swx f0 blue-btn mb-1">MacOS App</button>
+
+    <button class="swi sw f0_1 blue-btn-outline">iOS App</button>
+  </div>
+  <div class="column-container">
+    <button class="sw swx hide-desktop f0 blue-btn mb-1">MacOS App</button>
+
+    <button class="mb-2 hide-desktop sw swi f0_1 blue-btn-outline">
+      iOS App
+    </button>
+    <div id="contacts-companies-management" class="grid-2">
+      <div class="card feature-name">
+        <h3 multi_lang="FEATURE_MENU__CCM">Contacts & Companies Management</h3>
+        <h4 multi_lang="FEATURE_SUBTITLE__CCM" class="mb-2">without hassle.</h4>
+
+        <img src="./newimg/happy.png" class="img-maxmemoji" />
+
+        <div class="emojis-div"></div>
+      </div>
+
+      <div class="card feature-preview">
+        <img class="preview-1 img-0 img_0" src="./newimg/0.png" />
+        <img class="preview-1 img-0 img_01 hide" src="./newimg/0_1.png" />
+
+        <!-- <img class="preview-1 img-1 hide" src="./img/gif3.gif" /> -->
+      </div>
+    </div>
+
+    <div id="commands" class="grid-2 mt-2">
+      <div class="card feature-preview">
+        <img class="preview-2 img_0" src="./newimg/1.png" />
+        <img class="preview-2 img_01 hide" src="./newimg/2_1.png" />
+      </div>
+
+      <div class="card feature-name">
+        <h3 multi_lang="FEATURE_MENU__EC">Executable Commands</h3>
+        <h4 multi_lang="FEATURE_SUBTITLE__EC">
+          Simple, memorable, yet <br />powerful commands.
+        </h4>
+        <img src="./newimg/shout.png" class="img-noahmemoji" />
+
+        <div class="emojis-div">
+          <p class="light" id="command-words"></p>
+          <div class="result-div mt-1">
+            <p class="bold first">Brunch with Antoniette @ 11PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="time-tracking" class="grid-2 mt-2">
+      <div class="card feature-name">
+        <h3 multi_lang="FEATURE_MENU__TTIC">
+          Time Tracking & Invoice Generation
+        </h3>
+        <h4 multi_lang="FEATURE_SUBTITLE_TTIC">with ease.</h4>
+        <img src="./newimg/huh.png" class="img-wmemoji" />
+        <div class="emojis-div">
+          <!-- <div id="sw-0" class="switch shadow-md">
+              <div class="switch-btn"></div>
+            </div> -->
+          <div class="emojis"></div>
+        </div>
+      </div>
+      <div class="card feature-preview">
+        <img class="preview-0 img_0" src="./newimg/2.png" />
+        <img class="preview-0 img_01 hide" src="./newimg/1_1.png" />
+      </div>
+    </div>
+  </div>
+</div>

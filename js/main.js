@@ -261,15 +261,15 @@ $(".sw").on("click", function () {
   }
 });
 var featureDetailDe = [
-  '<span class="bold">Deutsch #1 ipsum dolor</span> sit amet,consectetur adipiscing elit, sed do eiusmod tempor.<br /><br />Consectetur adipiscing elit, sed do eiusmod tempor.',
-  '<span class="bold">Deutsch #2 ipsum dolor</span> sit amet,consectetur adipiscing elit, sed do eiusmod tempor.<br /><br />Consectetur adipiscing elit, sed do eiusmod tempor.',
-  '<span class="bold">Deutsch #3 ipsum dolor</span> sit amet,consectetur adipiscing elit, sed do eiusmod tempor.<br /><br />Consectetur adipiscing elit, sed do eiusmod tempor.',
+  '<span class="bold">In einfachen schritten, schnell Kontakte anlegen.</span> Passend Sortiert mit angefügter Geschäftshistorie, für den optimalen Überblick. <br/><br/>Wir helfen dir dabei deine Geschäftskontakte zu organisieren und  diese zu Pflegen.',
+  '<span class="bold">Arbeite effektiver</span> in dem du unsere Kurzbefehle verwendest. <br/><br />Finde alles was du im Moment benötigst und erstelle zum Beispiel schnell einen neuen Kontakt von überall auf deinem Computer',
+  '<span class="bold">Strukturiere dich und deine Projekte einfach</span> durch unser Projektmanagement tool.<br/><br/> Erfasse deine Zeit zu den passenden Projekten, um Rechnungen zu erstellen und alles im Griff zu haben. ',
 ];
 
 var featureDetailEn = [
-  '<span class="bold">English #1 ipsum dolor</span> sit amet,consectetur adipiscing elit, sed do eiusmod tempor.<br /><br />Consectetur adipiscing elit, sed do eiusmod tempor.',
-  '<span class="bold">English #2 ipsum dolor</span> sit amet,consectetur adipiscing elit, sed do eiusmod tempor.<br /><br />Consectetur adipiscing elit, sed do eiusmod tempor.',
-  '<span class="bold">English #3 ipsum dolor</span> sit amet,consectetur adipiscing elit, sed do eiusmod tempor.<br /><br />Consectetur adipiscing elit, sed do eiusmod tempor.',
+  '<span class="bold">Create contacts in simple steps</span> and quickly.<br/> <br/> Appropriately sorted with attached business history, for an optimal overview. Chimp organises your business contacts and helps you to maintain them.',
+  '<span class="bold">Save time</span> by using our shortcut feature.<br/> <br/> Find everything you need right now and quickly create a new contact from anywhere on your computer',
+  '<span class="bold">Structure yourself and your projects easily </span>with our project management tool.</span> <br/><br/> Enter your time to the appropriate projects to create the invoices and have everything under control.',
 ];
 $(".feature-card").on("click", function () {
   // Start animation. Add a css class or do this by javascript or whatever
