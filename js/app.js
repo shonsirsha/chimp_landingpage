@@ -20,7 +20,9 @@ $(document).ready(function () {
     var index = 0;
     setInterval(function () {
       wordsArr = [];
-      if (result == "de") {
+      var rx = localStorage.getItem("chimp_lang");
+
+      if (rx == "de") {
         wordsArr = [
           "Letzte Aktivitäten",
           "Neuste Projekte ",
@@ -28,7 +30,7 @@ $(document).ready(function () {
           "Todos",
           "Personalisierte Erinnerungen",
         ];
-      } else if (result == "en") {
+      } else if (rx == "en") {
         wordsArr = [
           "Recent activites",
           "Latest projects",

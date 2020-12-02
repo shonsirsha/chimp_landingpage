@@ -2,6 +2,7 @@ let language = localStorage.getItem("chimp_lang");
 if (language === null) {
   language = "/en";
 }
+
 $('[featureNum="1"]').click();
 var lang = {
   de: {
@@ -55,6 +56,15 @@ var lang = {
     COOKIES__TEXT: "Wir benutzen Cookies auf unserer Website",
     COOKIES__YES: "Okay, kein Problem!",
     COOKIES__NO: "Nein, danke!",
+
+    //others
+
+    FEATURES__BODY_MOBILE_1:
+      "<span class='bold'>In einfachen schritten, schnell Kontakte anlegen.</span> Passend Sortiert mit angefügter Geschäftshistorie, für den optimalen Überblick. <br/><br/>Wir helfen dir dabei deine Geschäftskontakte zu organisieren und  diese zu Pflegen.",
+    FEATURES__BODY_MOBILE_2:
+      "<span class='bold'>Arbeite effektiver</span> in dem du unsere Kurzbefehle verwendest. <br/><br />Finde alles was du im Moment benötigst und erstelle zum Beispiel schnell einen neuen Kontakt von überall auf deinem Computer",
+    FEATURES__BODY_MOBILE_3:
+      "<span class='bold'>Strukturiere dich und deine Projekte einfach</span> durch unser Projektmanagement tool.<br/><br/> Erfasse deine Zeit zu den passenden Projekten, um Rechnungen zu erstellen und alles im Griff zu haben.",
   },
   en: {
     NAV_LINK__FEATURES: "Features",
@@ -107,6 +117,15 @@ var lang = {
     COOKIES__TEXT: "We use cookies to understand how people use our website",
     COOKIES__YES: "Okay, sure...",
     COOKIES__NO: "Not for me!",
+
+    //others
+
+    FEATURES__BODY_MOBILE_1:
+      "<span class='bold'>Create contacts in simple steps</span> and quickly.<br/> <br/> Appropriately sorted with attached business history, for an optimal overview. Chimp organises your business contacts and helps you to maintain them.",
+    FEATURES__BODY_MOBILE_2:
+      "<span class='bold'>Save time</span> by using our shortcut feature.<br/> <br/> Find everything you need right now and quickly create a new contact from anywhere on your computer.",
+    FEATURES__BODY_MOBILE_3:
+      "<span class='bold'>Structure yourself and your projects easily </span>with our project management tool.</span> <br/><br/> Enter your time to the appropriate projects to create the invoices and have everything under control.",
   },
 };
 if (language == "de") {
@@ -191,6 +210,18 @@ function toGerman() {
   $('[multi_lang="COOKIES__TEXT"]').html(lang.de.COOKIES__TEXT);
   $('[multi_lang="COOKIES__YES"]').html(lang.de.COOKIES__YES);
   $('[multi_lang="COOKIES__NO"]').html(lang.de.COOKIES__NO);
+
+  $('[multi_lang="FEATURES__BODY_MOBILE_1"]').html(
+    lang.de.FEATURES__BODY_MOBILE_1
+  );
+
+  $('[multi_lang="FEATURES__BODY_MOBILE_2"]').html(
+    lang.de.FEATURES__BODY_MOBILE_2
+  );
+
+  $('[multi_lang="FEATURES__BODY_MOBILE_3"]').html(
+    lang.de.FEATURES__BODY_MOBILE_3
+  );
 }
 
 function toEnglish() {
@@ -243,4 +274,16 @@ function toEnglish() {
   $('[multi_lang="COOKIES__TEXT"]').html(lang.en.COOKIES__TEXT);
   $('[multi_lang="COOKIES__YES"]').html(lang.en.COOKIES__YES);
   $('[multi_lang="COOKIES__NO"]').html(lang.en.COOKIES__NO);
+
+  $('[multi_lang="FEATURES__BODY_MOBILE_1"]').html(
+    lang.en.FEATURES__BODY_MOBILE_1
+  );
+
+  $('[multi_lang="FEATURES__BODY_MOBILE_2"]').html(
+    lang.en.FEATURES__BODY_MOBILE_2
+  );
+
+  $('[multi_lang="FEATURES__BODY_MOBILE_3"]').html(
+    lang.en.FEATURES__BODY_MOBILE_3
+  );
 }

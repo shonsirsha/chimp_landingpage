@@ -12,6 +12,7 @@
 html {
   font-family: "Inter", sans-serif;
   font-weight: 400;
+  overflow-x: hidden;
 }
 body {
   font-family: "Inter", sans-serif;
@@ -180,6 +181,22 @@ li {
 .grid-2 {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
+}
+.feature-body-mobile {
+  margin-top: 24px;
+  margin-bottom: 32px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  img {
+    max-width: 100%;
+  }
+  .feature-body-detail {
+    p {
+      margin-top: 16px;
+      font-size: 24px;
+    }
+  }
 }
 .trial-wrapper {
   border-radius: 10px;
@@ -753,6 +770,7 @@ li {
 
   .chimp-tree {
     left: -20px;
+    bottom: -40px;
   }
   .chimp-walk {
     height: 25%;

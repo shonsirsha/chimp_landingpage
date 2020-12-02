@@ -41,39 +41,6 @@ $("a").on("click", function (event) {
   }
 });
 
-// var distance0 = $("#time-tracking").offset().top;
-// var distance1 = $("#contacts-companies-management").offset().top;
-// var distance2 = $("#commands").offset().top;
-
-// var $window = $(window);
-
-// var scrollTop = $(window).scrollTop(),
-//   elementOffset = $("#time-tracking").offset().top,
-//   distance = elementOffset - scrollTop;
-
-// let distances = [0, 0, 0];
-
-// $window.scroll(function () {
-//   let tt = $("#time-tracking").offset().top - $(".browser-border").offset().top;
-//   if (tt < 0) tt = tt * -1;
-//   let cc =
-//     $("#contacts-companies-management").offset().top -
-//     $(".browser-border").offset().top;
-//   if (cc < 0) cc = cc * -1;
-//   let c = $("#commands").offset().top - $(".browser-border").offset().top;
-//   if (c < 0) c = c * -1;
-//   distances[0] = cc;
-//   distances[1] = c;
-//   distances[2] = tt;
-//   let tempDist = distances.slice();
-//   tempDist.sort(function (a, b) {
-//     return a - b;
-//   });
-//   let ix = distances.indexOf(tempDist[0]);
-//   $(`.feature-link`).removeClass("active");
-//   $(`.feature-link`).eq(ix).addClass("active");
-// });
-
 $("input[type='submit']").on("click", function (e) {
   e.preventDefault();
 
@@ -228,38 +195,6 @@ function StartTextAnimation(i) {
 }
 StartTextAnimation(0);
 
-$(".sw").on("click", function () {
-  if ($(this).hasClass("swi")) {
-    $(".swi").addClass("blue-btn");
-    $(".swi").removeClass("blue-btn-outline");
-    $(".swx").removeClass("blue-btn");
-    $(".swx").addClass("blue-btn-outline");
-  }
-  if ($(this).hasClass("swx")) {
-    $(".swx").addClass("blue-btn");
-    $(".swx").removeClass("blue-btn-outline");
-    $(".swi").removeClass("blue-btn");
-    $(".swi").addClass("blue-btn-outline");
-  }
-
-  if ($(this).hasClass("f0")) {
-    if ($(".img_0").hasClass("hide")) {
-      $(".img_01").fadeOut(function () {
-        $(".img_01").addClass("hide");
-        $(".img_0").fadeIn();
-      });
-    }
-  }
-
-  if ($(this).hasClass("f0_1")) {
-    if ($(".img_01").hasClass("hide")) {
-      $(".img_0").fadeOut(function () {
-        $(".img_0").addClass("hide");
-        $(".img_01").fadeIn();
-      });
-    }
-  }
-});
 var featureDetailDe = [
   '<span class="bold">In einfachen schritten, schnell Kontakte anlegen.</span> Passend Sortiert mit angefügter Geschäftshistorie, für den optimalen Überblick. <br/><br/>Wir helfen dir dabei deine Geschäftskontakte zu organisieren und  diese zu Pflegen.',
   '<span class="bold">Arbeite effektiver</span> in dem du unsere Kurzbefehle verwendest. <br/><br />Finde alles was du im Moment benötigst und erstelle zum Beispiel schnell einen neuen Kontakt von überall auf deinem Computer',
@@ -271,26 +206,22 @@ var featureDetailEn = [
   '<span class="bold">Save time</span> by using our shortcut feature.<br/> <br/> Find everything you need right now and quickly create a new contact from anywhere on your computer',
   '<span class="bold">Structure yourself and your projects easily </span>with our project management tool.</span> <br/><br/> Enter your time to the appropriate projects to create the invoices and have everything under control.',
 ];
-$(".feature-card").on("click", function () {
+$(".pc").on("click", function () {
   // Start animation. Add a css class or do this by javascript or whatever
-
-  $(".feature-card").removeClass("active");
+  initialLaunch++;
+  $(".pc").removeClass("active");
   $(this).addClass("active");
   var resultLoc = localStorage.getItem("chimp_lang");
   var featureNum = $(this).attr("featureNum");
-  // var width = $(window).width();
-  // var minus = 400;
-  // if (width > 1070) {
-  //   minus = 120;
-  // }
+  var minus = 120;
 
-  $(`.img-feature`).fadeOut(200, function () {
+  $(`.img-feature-x`).fadeOut(200, function () {
     setTimeout(() => {
-      $(`.img-feature`).attr(
+      $(`.img-feature-x`).attr(
         "src",
         `../newimg/GroupedFeature${featureNum}.png`
       );
-      $(`.img-feature`).fadeIn();
+      $(`.img-feature-x`).fadeIn();
     }, 150);
   });
 
@@ -300,12 +231,12 @@ $(".feature-card").on("click", function () {
     $(".feature-body-text").html(featureDetailEn[parseInt(featureNum - 1)]);
   }
 
-  // if (initialLaunch > 1) {
-  //   $("html, body").animate(
-  //     {
-  //       scrollTop: $(".feature-body-detail").offset().top - minus,
-  //     },
-  //     550
-  //   );
-  // }
+  if (initialLaunch > 1) {
+    $("html, body").animate(
+      {
+        scrollTop: $(".zaza").offset().top - minus,
+      },
+      550
+    );
+  }
 });
